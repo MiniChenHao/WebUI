@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DB020F56-20BA-43A3-ABB6-36F08822242A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Common</RootNamespace>
+    <AssemblyName>Common</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="NetBean\CookieHelper.cs" />
+    <Compile Include="NetBean\RequestSession.cs" />
+    <Compile Include="NetBean\SessionUser.cs" />
+    <Compile Include="NetCode\CacheHelper.cs" />
+    <Compile Include="NetCode\CommonHelper.cs" />
+    <Compile Include="NetCode\ConvertHelper.cs" />
+    <Compile Include="NetCode\DateTimeHelper.cs" />
+    <Compile Include="NetCode\LogHelper.cs" />
+    <Compile Include="NetCode\PinyinHelper.cs" />
+    <Compile Include="NetCode\RequestHelper.cs" />
+    <Compile Include="NetCode\RMBHelper.cs" />
+    <Compile Include="NetCode\SqlFilterHelper.cs" />
+    <Compile Include="NetCode\SqlParam.cs" />
+    <Compile Include="NetCode\StringHelper.cs" />
+    <Compile Include="NetCode\ValidateUtil.cs" />
+    <Compile Include="NetConfig\ConfigHelper.cs" />
+    <Compile Include="NetData\DataTableHelper.cs" />
+    <Compile Include="NetData\HashtableHelper.cs" />
+    <Compile Include="NetData\ReaderToIListHelper.cs" />
+    <Compile Include="NetData\ValidationHelper.cs" />
+    <Compile Include="NetData\XMLHelper.cs" />
+    <Compile Include="NetEmail\SMTPManager.cs" />
+    <Compile Include="NetEncrypt\DESEncrypt.cs" />
+    <Compile Include="NetEncrypt\Md5Helper.cs" />
+    <Compile Include="NetEnum\EnumHelper.cs" />
+    <Compile Include="NetEnum\SysEnum.cs" />
+    <Compile Include="NetFile\DirFileHelper.cs" />
+    <Compile Include="NetFile\FileDownHelper.cs" />
+    <Compile Include="NetFile\FileHelper.cs" />
+    <Compile Include="NetFile\FTPHelper.cs" />
+    <Compile Include="NetFile\GZipHelper.cs" />
+    <Compile Include="NetFile\UploadHelper.cs" />
+    <Compile Include="NetImage\ImageHelper.cs" />
+    <Compile Include="NetJson\JsonHelper.cs" />
+    <Compile Include="NetUI\ControlBindHelper.cs" />
+    <Compile Include="NetUI\ExcelHelper.cs" />
+    <Compile Include="NetUI\IPScanerHelper.cs" />
+    <Compile Include="NetUI\ShowMsgHelper.cs" />
+    <Compile Include="NetUI\WebHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NetLog\" />
+    <Folder Include="NetSql\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

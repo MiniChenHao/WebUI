@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Web.Security;
+
+namespace Common.NetEncrypt
+{
+    public class Md5Helper
+    {
+        public static string MD5(string str, int code)
+        {
+            string strEncrypt = string.Empty;
+            if (code == 16)
+            {
+                strEncrypt = FormsAuthentication.HashPasswordForStoringInConfigFile(str, "MD5").Substring(8, 16);
+            }
+            if (code == 32)
+            {
+                strEncrypt = FormsAuthentication.HashPasswordForStoringInConfigFile(str, "MD5");
+            }
+            return strEncrypt;
+        }
+    }
+}

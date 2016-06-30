@@ -1,0 +1,16 @@
+F:\WebProgram\WebUI\AdminUI\bin\AdminUI.dll
+F:\WebProgram\WebUI\AdminUI\bin\AdminUI.pdb
+F:\WebProgram\WebUI\AdminUI\obj\Debug\AdminUI.dll
+F:\WebProgram\WebUI\AdminUI\obj\Debug\AdminUI.pdb
+C:\Users\Administrator\Desktop\WebUI\AdminUI\bin\AdminUI.dll
+C:\Users\Administrator\Desktop\WebUI\AdminUI\bin\AdminUI.pdb
+C:\Users\Administrator\Desktop\WebUI\AdminUI\obj\Debug\AdminUI.dll
+C:\Users\Administrator\Desktop\WebUI\AdminUI\obj\Debug\AdminUI.pdb
+E:\WebObject\WebUI\AdminUI\bin\AdminUI.dll
+E:\WebObject\WebUI\AdminUI\bin\AdminUI.pdb
+E:\WebObject\WebUI\AdminUI\obj\Debug\AdminUI.dll
+E:\WebObject\WebUI\AdminUI\obj\Debug\AdminUI.pdb
+E:\云同步文件夹\云同步文件夹\WebUI\AdminUI\bin\AdminUI.dll
+E:\云同步文件夹\云同步文件夹\WebUI\AdminUI\bin\AdminUI.pdb
+E:\云同步文件夹\云同步文件夹\WebUI\AdminUI\obj\Debug\AdminUI.dll
+E:\云同步文件夹\云同步文件夹\WebUI\AdminUI\obj\Debug\AdminUI.pdb
