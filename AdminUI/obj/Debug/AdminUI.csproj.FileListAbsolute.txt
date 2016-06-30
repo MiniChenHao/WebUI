@@ -14,3 +14,7 @@ E:\云同步文件夹\云同步文件夹\WebUI\AdminUI\bin\AdminUI.dll
 E:\云同步文件夹\云同步文件夹\WebUI\AdminUI\bin\AdminUI.pdb
 E:\云同步文件夹\云同步文件夹\WebUI\AdminUI\obj\Debug\AdminUI.dll
 E:\云同步文件夹\云同步文件夹\WebUI\AdminUI\obj\Debug\AdminUI.pdb
+E:\GitHub库\WebUI\AdminUI\bin\AdminUI.dll
+E:\GitHub库\WebUI\AdminUI\bin\AdminUI.pdb
+E:\GitHub库\WebUI\AdminUI\obj\Debug\AdminUI.dll
+E:\GitHub库\WebUI\AdminUI\obj\Debug\AdminUI.pdb

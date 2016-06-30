@@ -49,8 +49,8 @@
         #accordion img{ margin:-2px 5px 0px 0px; vertical-align: middle; }
         #accordion .menu_body{ padding:10px; }
         #accordion .menu_body li { padding:5px 15px; border:solid 1px #FFFFFF; margin-bottom: 2px; cursor: pointer;}
-        #accordion .menu_body .bodyHover{ background1: #0099FF; background: #FFCC00; border: solid 1px #ada9aa; }
-        #accordion .menu_body .bodyselected{ background1: #0099FF; background: #FFCC00; border: solid 1px #cccccc;  }
+        #accordion .menu_body .bodyHover{ background: #FFCC00; border: solid 1px #ada9aa; }
+        #accordion .menu_body .bodyselected{ background: #FFCC00; border: solid 1px #cccccc;  }
         #accordion .menu_body li img { padding-right: 5px; }
     </style>
 </head>

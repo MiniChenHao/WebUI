@@ -14,3 +14,7 @@ E:\云同步文件夹\云同步文件夹\WebUI\WebUI\bin\WebUI.dll
 E:\云同步文件夹\云同步文件夹\WebUI\WebUI\bin\WebUI.pdb
 E:\云同步文件夹\云同步文件夹\WebUI\WebUI\obj\Debug\WebUI.dll
 E:\云同步文件夹\云同步文件夹\WebUI\WebUI\obj\Debug\WebUI.pdb
+E:\GitHub库\WebUI\WebUI\bin\WebUI.dll
+E:\GitHub库\WebUI\WebUI\bin\WebUI.pdb
+E:\GitHub库\WebUI\WebUI\obj\Debug\WebUI.dll
+E:\GitHub库\WebUI\WebUI\obj\Debug\WebUI.pdb

@@ -2607,6 +2607,7 @@
     <Content Include="Threme\Image\32\sitemap.png" />
     <Content Include="Threme\Image\32\userregedit.png" />
     <Content Include="Threme\Image\32\users_business_32.png" />
+    <Content Include="Threme\Image\clock_32.png" />
     <Content Include="Threme\JScript\FunctionJS.js" />
     <Content Include="Threme\JScript\Loading.html" />
     <Content Include="Threme\JScript\JQuertUI\external\jquery\jquery.js" />
