@@ -13,6 +13,21 @@
     <script type="text/javascript">
         $(document).ready(function () {
         })
+
+        function Refresh() {
+            alert("1");
+            var currTab = self.parent.$('#tabs').tabs('getSelected'); //获得当前tab
+            alert(currTab);
+            var url = $(currTab.panel('options').content).attr('src');
+            alert(url);
+            self.parent.$('#tabs').tabs('update', {
+                tab: currTab,
+                options: {
+                    content: createFrame(url)
+                }
+            });
+            alert("4");
+        }
     </script>
     <style type="text/css">
         *{ margin:0px; padding:0px;}

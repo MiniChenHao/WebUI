@@ -1,0 +1,46 @@
+﻿body { display: flex; flex-direction: column; }
+html, body { cursor: default; height: 100%; margin: 0; overflow: hidden; width: 100%; }
+body { font-family: 'Segoe UI',Arial,'Microsoft Yahei',sans-serif; font-size: 75%; }
+h1 { flex: 1; font-size: 1.5em; font-weight: normal; line-height: 1; margin: 15px 0;}
+.NorthHeader  
+{
+    height: 60px; 
+    border-bottom: 2px solid #90BCD9; 
+    background-color: #DDDDDD; 
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#4BB1E7,endColorStr=#07608D); /*IE 6 7 8*/
+    background: -ms-linear-gradient(top, #4BB1E7, #07608D);/* IE 10 */
+    background: -moz-linear-gradient(top, #4BB1E7, #07608D);/*火狐*/
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%,from(#4BB1E7), to(#07608D));/*谷歌*/
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4BB1E7), to(#07608D));/* Safari 4-5, Chrome 1-9*/
+    background: -webkit-linear-gradient(top, #4BB1E7, #07608D);/*Safari5.1 Chrome 10+*/
+    background: -o-linear-gradient(top, #4BB1E7, #07608D);/*Opera 11.10+*/
+    }
+.NorthHeader .Logo { float: left; margin-left: 20px; height: 60px; width: 270px; line-height: 60px; font-size: 1.5em; font-family: 宋体,Geneva, Arial, Helvetica, sans-serif; color: #FFFFFF; }
+.NorthHeader .Menu { float: right; margin-right: 2px; height: 60px; }
+.NorthHeader .Menu div  
+{
+    border: 1px solid #08618E; 
+    border-top-left-radius: 5px; 
+    border-top-right-radius: 5px; 
+    padding-left:10px;
+    padding-right:10px;
+    line-height: 32px; 
+    text-align: center; 
+    height: 32px; 
+    margin-left: 2px; 
+    float: left; 
+    font-size: 11pt; 
+    font-weight: bold; 
+    vertical-align: bottom; 
+    cursor: pointer; 
+    border-bottom: 0px;
+    }
+.NorthHeader .Menu .Select { background-color: #FFFFFF; color:#000000; }
+.NorthHeader .Menu .Remove { background-color: #007fff; color:#FFFFFF; }
+.NorthFooter { height: 23px; background-color: #DDDDDD; }
+.NorthFooter img { vertical-align: middle; padding-bottom: 1px; }
+.NorthFooter .Time { width: 195px; height: 100%; text-align: center; float: left; color: #222; font-weight: bold; line-height:22px; }
+.NorthFooter .News { height: 100%; text-align: left; padding-left: 2px; color: #222; width: auto; line-height: 22px; }
+.NorthFooter #LoginUser { float: left; padding-left: 5px; }
+.NorthFooter #Logout { float: right; padding-right: 4px; }
+.NorthFooter #Logout img{ float: left; cursor: pointer; padding-top: 2px; margin-left: 5px; }

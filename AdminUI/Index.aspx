@@ -7,20 +7,23 @@
     <title></title>
     <link href="/Threme/JScript/JQuertUI/jquery-ui.css" rel="stylesheet" type="text/css" />
     <link href="/Threme/JScript/JQuertUI/layout-latest.css" rel="stylesheet" type="text/css" />
-    <link href="/Threme/CSS/Index.css" rel="stylesheet" type="text/css" />
+    <link href="/Threme/CSS/Center.css" rel="stylesheet" type="text/css" />
     <script src="/Threme/JScript/jquery-1.12.3.min.js" type="text/javascript"></script>
     <script src="/Threme/JScript/JQuertUI/external/jquery/jquery.js" type="text/javascript"></script>
     <script src="/Threme/JScript/JQuertUI/jquery-ui.js" type="text/javascript"></script>
     <script src="/Threme/JScript/JQuertUI/jquery.layout-latest.js" type="text/javascript"></script>
     <script src="/Threme/JScript/FunctionJS.js" type="text/javascript"></script>
+    <script src="/Threme/JScript/Center.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('body').layout({
                 applyDefaultStyles: false,
                 maskIframesOnResize: "#Center",
                 scrollToBookmarkOnLoad: false, //页加载时滚动到标签
+                togglerTip_open: "关闭",
+                togglerTip_closed: "打开",
                 north: {
-                    size: 95,
+                    size: 98,
                     spacing_open: 3,
                     closable: false,
                     resizable: false
@@ -28,7 +31,7 @@
                 west: {
                     size: 200,
                     spacing_open: 3,
-                    closable: false,
+                    closable: true,
                     resizable: false
                 },
                 south: {
@@ -46,19 +49,10 @@
                     resizable: true
                 }
             });
-            writeDateInfo($("#DateTime"));
         });
     </script>
     <style type="text/css">
-        .NorthHeader { height: 60px; border-bottom: 2px solid #003EFF; background-color: #DDDDDD; }
-        .NorthHeader .Logo { float: left; margin-left: 20px; height: 60px; width: 270px; line-height: 60px; font-size: 1.5em; font-family: 宋体,Geneva, Arial, Helvetica, sans-serif;}
-        .NorthHeader .Menu { float: right; margin-right: 2px; height: 60px; }
-        .NorthHeader .Menu div { border: 1px solid #000000; border-top-left-radius: 5px; border-top-right-radius: 5px; width: 100px; line-height: 32px; text-align: center; height: 32px; margin-left: 2px; float: left; font-size: 11pt; font-weight: bold; vertical-align: bottom;}
-        .NorthHeader .Menu .Select { background-color: #FFFFFF; color:#000000; }
-        .NorthHeader .Menu .Remove { background-color: #007fff; color:#FFFFFF; }
-        .NorthButton { height: 23px; background-color: #DDDDDD; }
-        .NorthButton img { vertical-align: middle; padding-bottom: 1px; }
-        .NorthButton .Time { width: 195px; height: 100%; padding-left: 20px; float: left; color: #222; font-weight: bold; line-height:22px; }
+        
     </style>
 </head>
 <body>
@@ -82,10 +76,22 @@
                 </table>
             </div>
         </div>
-        <div class="NorthButton">
+        <div class="NorthFooter">
             <div class="Time">
                 <img src="/Threme/Image/clock_32.png" alt="" height="20" width="20" />
                 <span id="DateTime"></span>
+            </div>
+            <div class="News">
+                <div id="LoginUser">
+                    <img src="Threme/Image/sun_2.png" alt="" width="20" height="20" alt="" />
+                    <label id="Greetings"></label>
+                    <label id="UserName" runat="server">谌昊</label>
+                    欢迎登录系统！
+                </div>
+                <div id="Logout">
+                    <img src="/Threme/Image/refresh.png" width="20" height="20" title="刷新" alt="刷新" onclick="RefreshCenter();" />
+                    <img src="/Threme/Image/button-white-stop.png" width="20" height="20" title="安全退出" alt="安全退出" onclick=" alert('您确定要退出吗？')" />
+                </div>
             </div>
         </div>
     </div>  

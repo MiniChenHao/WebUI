@@ -57,6 +57,7 @@
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Threme\CSS\Center.css" />
     <Content Include="Threme\CSS\Index.css" />
     <Content Include="Threme\Image\16\01.png" />
     <Content Include="Threme\Image\16\02.gif" />
@@ -2607,7 +2608,11 @@
     <Content Include="Threme\Image\32\sitemap.png" />
     <Content Include="Threme\Image\32\userregedit.png" />
     <Content Include="Threme\Image\32\users_business_32.png" />
+    <Content Include="Threme\Image\button-white-stop.png" />
     <Content Include="Threme\Image\clock_32.png" />
+    <Content Include="Threme\Image\refresh.png" />
+    <Content Include="Threme\Image\sun_2.png" />
+    <Content Include="Threme\JScript\Center.js" />
     <Content Include="Threme\JScript\FunctionJS.js" />
     <Content Include="Threme\JScript\Loading.html" />
     <Content Include="Threme\JScript\JQuertUI\external\jquery\jquery.js" />
