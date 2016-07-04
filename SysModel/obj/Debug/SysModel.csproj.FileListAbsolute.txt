@@ -6,3 +6,9 @@ E:\GitHub库\WebUI\SysModel\bin\Debug\SysModel.dll
 E:\GitHub库\WebUI\SysModel\bin\Debug\SysModel.pdb
 E:\GitHub库\WebUI\SysModel\obj\Debug\SysModel.dll
 E:\GitHub库\WebUI\SysModel\obj\Debug\SysModel.pdb
+E:\GitHub库\WebUI\SysModel\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.dll
+E:\GitHub库\WebUI\SysModel\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\GitHub库\WebUI\SysModel\bin\Debug\Microsoft.Practices.Unity.dll
+E:\GitHub库\WebUI\SysModel\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+E:\GitHub库\WebUI\SysModel\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+E:\GitHub库\WebUI\SysModel\bin\Debug\Microsoft.Practices.ServiceLocation.dll

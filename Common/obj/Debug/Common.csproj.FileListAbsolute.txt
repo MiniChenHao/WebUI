@@ -9,6 +9,5 @@ E:\云同步文件夹\云同步文件夹\WebUI\Common\obj\Debug\Common.pdb
 E:\云同步文件夹\云同步文件夹\WebUI\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 E:\GitHub库\WebUI\Common\bin\Debug\Common.dll
 E:\GitHub库\WebUI\Common\bin\Debug\Common.pdb
-E:\GitHub库\WebUI\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 E:\GitHub库\WebUI\Common\obj\Debug\Common.dll
 E:\GitHub库\WebUI\Common\obj\Debug\Common.pdb

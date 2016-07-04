@@ -6,3 +6,14 @@ E:\GitHub库\WebUI\SysDAL\bin\Debug\SysDAL.dll
 E:\GitHub库\WebUI\SysDAL\bin\Debug\SysDAL.pdb
 E:\GitHub库\WebUI\SysDAL\obj\Debug\SysDAL.dll
 E:\GitHub库\WebUI\SysDAL\obj\Debug\SysDAL.pdb
+E:\GitHub库\WebUI\SysDAL\bin\Debug\Common.dll
+E:\GitHub库\WebUI\SysDAL\bin\Debug\SysModel.dll
+E:\GitHub库\WebUI\SysDAL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.dll
+E:\GitHub库\WebUI\SysDAL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\GitHub库\WebUI\SysDAL\bin\Debug\Microsoft.Practices.Unity.dll
+E:\GitHub库\WebUI\SysDAL\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+E:\GitHub库\WebUI\SysDAL\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+E:\GitHub库\WebUI\SysDAL\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+E:\GitHub库\WebUI\SysDAL\bin\Debug\Common.pdb
+E:\GitHub库\WebUI\SysDAL\bin\Debug\SysModel.pdb
+E:\GitHub库\WebUI\SysDAL\obj\Debug\SysDAL.csprojResolveAssemblyReference.cache

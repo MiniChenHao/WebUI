@@ -15,18 +15,18 @@
         })
 
         function Refresh() {
-            alert("1");
-            var currTab = self.parent.$('#tabs').tabs('getSelected'); //获得当前tab
-            alert(currTab);
-            var url = $(currTab.panel('options').content).attr('src');
-            alert(url);
-            self.parent.$('#tabs').tabs('update', {
-                tab: currTab,
-                options: {
-                    content: createFrame(url)
-                }
-            });
-            alert("4");
+            var curTabWin = null;
+            var currTab = $('#tabs').tabs('getSelected'); //获得当前tab
+            if (currTab && currTab.find('iframe').length > 0) {
+                curTabWin = currTab.find('iframe')[0];
+                var url = $(curTabWin).attr('src');
+                $('#tabs').tabs('update', {
+                    tab: currTab,
+                    options: {
+                        content: '<iframe src=\"' + url + '\" scrolling=\"auto\" frameborder=\"0\" width=\"100%\" height=\"100%\"></iframe>'
+                    }
+                });
+            }
         }
     </script>
     <style type="text/css">

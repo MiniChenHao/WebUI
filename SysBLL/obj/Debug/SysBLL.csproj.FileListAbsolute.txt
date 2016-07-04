@@ -6,3 +6,16 @@ E:\GitHub库\WebUI\SysBLL\bin\Debug\SysBLL.dll
 E:\GitHub库\WebUI\SysBLL\bin\Debug\SysBLL.pdb
 E:\GitHub库\WebUI\SysBLL\obj\Debug\SysBLL.dll
 E:\GitHub库\WebUI\SysBLL\obj\Debug\SysBLL.pdb
+E:\GitHub库\WebUI\SysBLL\bin\Debug\Common.dll
+E:\GitHub库\WebUI\SysBLL\bin\Debug\SysDAL.dll
+E:\GitHub库\WebUI\SysBLL\bin\Debug\SysModel.dll
+E:\GitHub库\WebUI\SysBLL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.dll
+E:\GitHub库\WebUI\SysBLL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\GitHub库\WebUI\SysBLL\bin\Debug\Microsoft.Practices.Unity.dll
+E:\GitHub库\WebUI\SysBLL\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+E:\GitHub库\WebUI\SysBLL\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+E:\GitHub库\WebUI\SysBLL\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+E:\GitHub库\WebUI\SysBLL\bin\Debug\Common.pdb
+E:\GitHub库\WebUI\SysBLL\bin\Debug\SysDAL.pdb
+E:\GitHub库\WebUI\SysBLL\bin\Debug\SysModel.pdb
+E:\GitHub库\WebUI\SysBLL\obj\Debug\SysBLL.csprojResolveAssemblyReference.cache

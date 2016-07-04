@@ -40,6 +40,7 @@ function writeDateInfo(item) {
     $(item).text(year + "年" + mymonth + "月" + myday + "日 " + weekday);
 }
 
+//登录问候
 function BeautifulGreetings() {
     var now = new Date();
     var hour = now.getHours();
@@ -51,8 +52,18 @@ function BeautifulGreetings() {
     else if (hour < 23) { return ("晚上好！") }
     else { return ("夜深了,早点休息吧！") }
 }
+
+//中间页刷新
 function RefreshCenter() {
-    alert("asdfa");
     window.frames["Center"].contentWindow.Refresh();
-    alert("asdfasdf");
+}
+
+
+//安全登出
+function LogOut() {
+    top.showConfirmMsg('确定要安全退出吗？', function (r) {
+        if (r) {
+            window.location.href = '/Index.aspx';
+        }
+    });
 }

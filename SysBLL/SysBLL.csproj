@@ -43,6 +43,20 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{DB020F56-20BA-43A3-ABB6-36F08822242A}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SysDAL\SysDAL.csproj">
+      <Project>{F7C2B251-A219-456E-A46A-A27345D3AFF8}</Project>
+      <Name>SysDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SysModel\SysModel.csproj">
+      <Project>{71F7DE5E-D6B9-414E-BBC4-A28CF90B2C9E}</Project>
+      <Name>SysModel</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
