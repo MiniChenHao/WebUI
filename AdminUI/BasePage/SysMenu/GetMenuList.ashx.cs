@@ -32,26 +32,35 @@ namespace AdminUI.BasePage.SysMenu
         public void IListToJson(List<SysMenuModel> list)
         {
             MenuJson = "{\"total\":\"" + model.OUTTotalCount + "\",\"rows\":[";
-            GetRowData(list, "0");
+            GetJsonString(list, "0");
             MenuJson += "]}";
         }
 
-        public void GetRowData(List<SysMenuModel> list, string ParentID)
+        public void GetJsonString(List<SysMenuModel> list, string ParentID)
         {
-            List<SysMenuModel> newList = new List<SysMenuModel>();
-            foreach (SysMenuModel item in list)
+            foreach (SysMenuModel item in GetRowData(list, ParentID))
             {
                 if (item.ParentID == "0")
                 {
                     MenuJson += "{\"MenuID\":\"" + item.MenuID + "\",\"MenuName\":\"" + item.MenuName + "\",\"MenuImg\":\"" + "<img src=\"/Threme/Image/32/" + item.MenuImg + "\" width='16' height='16' />" + "\",\"SortCode\":\"" + item.SortCode + "\",\"NavigateUrl\":\"" + item.NavigateUrl + "\"}";
-                    GetRowData(list, item.MenuID.ToString());
+                    GetJsonString(list, item.MenuID.ToString());
                 }
                 else if (item.ParentID == ParentID)
                 {
                     MenuJson += "{\"MenuID\":\"" + item.MenuID + "\",\"MenuName\":\"" + item.MenuName + "\",\"MenuImg\":\"" + "<img src=\"/Threme/Image/32/" + item.MenuImg + "\" width='16' height='16' />" + "\",\"SortCode\":\"" + item.SortCode + "\",\"NavigateUrl\":\"" + item.NavigateUrl + "\",\"_parentId\":\"" + item.ParentID + "\"}";
-                    GetRowData(list, item.MenuID.ToString());
+                    GetJsonString(list, item.MenuID.ToString());
                 }
             }
+        }
+
+        public List<SysMenuModel> GetRowData(List<SysMenuModel> list, string ParentID)
+        {
+            List<SysMenuModel> newList = new List<SysMenuModel>();
+            foreach (SysMenuModel item in list)
+            {
+                newList.Add(item);
+            }
+            return newList;
         }
 
         public bool IsReusable
