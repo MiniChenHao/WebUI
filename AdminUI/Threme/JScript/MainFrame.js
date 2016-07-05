@@ -7,6 +7,7 @@
         $(this).removeClass("Remove");
         $(this).addClass("Select");
     })
+    $(".NorthHeader .Menu .Select").click();
 })
 
 //当前日期
@@ -66,4 +67,8 @@ function LogOut() {
             window.location.href = '/Index.aspx';
         }
     });
+}
+
+function LoadMenu(ParentID) {
+    $("#West").attr("src", "West.aspx?PID=" + ParentID);
 }

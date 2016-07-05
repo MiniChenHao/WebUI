@@ -33,3 +33,4 @@ E:\GitHub库\WebUI\AdminUI\bin\SysBLL.pdb
 E:\GitHub库\WebUI\AdminUI\bin\SysDAL.pdb
 E:\GitHub库\WebUI\AdminUI\bin\SysModel.pdb
 E:\GitHub库\WebUI\AdminUI\obj\Debug\AdminUI.csprojResolveAssemblyReference.cache
+E:\GitHub库\WebUI\AdminUI\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll

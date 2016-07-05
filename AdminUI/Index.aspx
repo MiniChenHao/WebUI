@@ -72,8 +72,11 @@
                     <tbody>
                         <tr valign="bottom">
                             <td>
-                                <div class="Select">系统管理</div>
-                                <div class="Remove">数据库管理</div>
+                                <asp:Repeater ID="TopMenu" runat="server">
+                                    <ItemTemplate>
+                                        <div class='<%# Eval("RowNo").ToString() == "1" ? "Select" : "Remove" %>' onclick="LoadMenu('<%# Eval("MenuID") %>');"><%# Eval("MenuName") %></div>
+                                    </ItemTemplate>
+                                </asp:Repeater>
                             </td>
                         </tr>
                     </tbody>

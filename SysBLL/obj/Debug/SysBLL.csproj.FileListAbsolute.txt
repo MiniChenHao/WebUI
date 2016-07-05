@@ -19,3 +19,4 @@ E:\GitHub库\WebUI\SysBLL\bin\Debug\Common.pdb
 E:\GitHub库\WebUI\SysBLL\bin\Debug\SysDAL.pdb
 E:\GitHub库\WebUI\SysBLL\bin\Debug\SysModel.pdb
 E:\GitHub库\WebUI\SysBLL\obj\Debug\SysBLL.csprojResolveAssemblyReference.cache
+E:\GitHub库\WebUI\SysBLL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll

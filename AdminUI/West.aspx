@@ -39,7 +39,8 @@
         }
 
         function NavMenuUrl(url, title) {
-            window.parent.frames["Center"].contentWindow.TabsAdd(title, url, null);
+            //window.parent.frames["Center"].contentWindow.TabsAdd(title, url, null);
+            top.frames["Center"].contentWindow.TabsAdd(title, url, null);
         }
     </script>
     <style type="text/css">
@@ -57,23 +58,7 @@
 <body>
     <form id="form1" runat="server" style=" height:100%; width:100%;">
     <div id="accordion">
-        <ul class="menu_title"><img src="/Threme/Image/32/189.png" width='16' height='16' />系统管理</ul>
-        <ul class="menu_body">
-            <li onclick="NavMenuUrl('/BasePage/SysMenu/MenuList.aspx','菜单管理')"><img src="/Threme/Image/32/sitemap.png" width='22' height='22' />菜单管理</li>
-            <li onclick="NavMenuUrl('https://www.baidu.com','操作按钮')"><img src="/Threme/Image/32/567.png" width='22' height='22' />操作按钮</li>
-            <li onclick="NavMenuUrl('https://www.baidu.com','用户管理')"><img src="/Threme/Image/32/userregedit.png" width='22' height='22' />用户管理</li>
-            <li onclick="NavMenuUrl('https://www.baidu.com','部门管理')"><img src="/Threme/Image/32/20130508035912738_easyicon_net_32.png" width='22' height='22' />部门管理</li>
-            <li onclick="NavMenuUrl('https://www.baidu.com','角色管理')"><img src="/Threme/Image/32/20130508035646751_easyicon_net_32.png" width='22' height='22' />角色管理</li>
-            <li onclick="NavMenuUrl('https://www.baidu.com','员工管理')"><img src="/Threme/Image/32/20130508034816125_easyicon_net_32.png" width='22' height='22' />员工管理</li>
-        </ul>
-        <ul class="menu_title"><img src="/Threme/Image/32/189.png" width='16' height='16' />系统管理</ul>
-        <ul class="menu_body">
-            <li onclick="NavMenuUrl('https://www.baidu.com','菜单管理')"><img src="/Threme/Image/32/sitemap.png" width='22' height='22' />菜单管理</li>
-        </ul>
-        <ul class="menu_title"><img src="/Threme/Image/32/189.png" width='16' height='16' />系统管理</ul>
-        <ul class="menu_body">
-            <li onclick="NavMenuUrl('https://www.baidu.com','菜单管理')"><img src="/Threme/Image/32/sitemap.png" width='22' height='22' />菜单管理</li>
-        </ul>
+        <%=MenuHtml %>
     </div>
     </form>
 </body>

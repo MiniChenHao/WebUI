@@ -17,3 +17,4 @@ E:\GitHub库\WebUI\SysDAL\bin\Debug\Microsoft.Practices.ServiceLocation.dll
 E:\GitHub库\WebUI\SysDAL\bin\Debug\Common.pdb
 E:\GitHub库\WebUI\SysDAL\bin\Debug\SysModel.pdb
 E:\GitHub库\WebUI\SysDAL\obj\Debug\SysDAL.csprojResolveAssemblyReference.cache
+E:\GitHub库\WebUI\SysDAL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll

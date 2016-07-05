@@ -3405,6 +3405,9 @@
     <Content Include="West.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BasePage\SysMenu\GetMenuList.ashx.cs">
+      <DependentUpon>GetMenuList.ashx</DependentUpon>
+    </Compile>
     <Compile Include="BasePage\SysMenu\MenuList.aspx.cs">
       <DependentUpon>MenuList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3460,6 +3463,7 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BasePage\SysMenu\GetMenuList.ashx" />
     <None Include="Threme\JScript\jquery-easyui-1.4.5\demo\accordion\datagrid_data1.json" />
     <None Include="Threme\JScript\jquery-easyui-1.4.5\demo\combobox\combobox_data1.json" />
     <None Include="Threme\JScript\jquery-easyui-1.4.5\demo\combobox\combobox_data2.json" />
