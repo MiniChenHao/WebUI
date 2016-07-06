@@ -15,7 +15,6 @@ namespace AdminUI.BasePage.SysMenu
         SysMenuBLL SMBll = new SysMenuBLL();
         SysMenuModel model = new SysMenuModel();
         public string MenuJson = "";
-        string huyt = "{\"total\":9,\"rows\":[ {\"MenuID\":1,\"MenuName\":\"Wyoming\",\"MenuImg\":2000}, {\"MenuID\":11,\"MenuName\":\"Albin\",\"MenuImg\":2000,\"NavigateUrl\":1800,\"_parentId\":1}, {\"MenuID\":12,\"MenuName\":\"Canon\",\"MenuImg\":2000,\"NavigateUrl\":1800,\"_parentId\":1}, {\"MenuID\":13,\"MenuName\":\"Egbert\",\"MenuImg\":2000,\"NavigateUrl\":1800,\"_parentId\":1}, {\"MenuID\":2,\"MenuName\":\"Washington\"}, {\"MenuID\":21,\"MenuName\":\"Bellingham\",\"MenuImg\":2000,\"NavigateUrl\":1800,\"_parentId\":2}, {\"MenuID\":22,\"MenuName\":\"Chehalis\",\"MenuImg\":2000,\"NavigateUrl\":1800,\"_parentId\":2}, {\"MenuID\":23,\"MenuName\":\"Ellensburg\",\"MenuImg\":2000,\"NavigateUrl\":1800,\"_parentId\":2}, {\"MenuID\":24,\"MenuName\":\"Monroe\",\"MenuImg\":2000,\"NavigateUrl\":1800,\"_parentId\":2}]}";
         public void ProcessRequest(HttpContext context)
         {
             context.Response.ContentType = "text/plain";
@@ -33,6 +32,7 @@ namespace AdminUI.BasePage.SysMenu
         {
             MenuJson = "{\"total\":\"" + model.OUTTotalCount + "\",\"rows\":[";
             GetJsonString(list, "0");
+            MenuJson = MenuJson.TrimEnd(',');
             MenuJson += "]}";
         }
 
@@ -42,12 +42,12 @@ namespace AdminUI.BasePage.SysMenu
             {
                 if (item.ParentID == "0")
                 {
-                    MenuJson += "{\"MenuID\":\"" + item.MenuID + "\",\"MenuName\":\"" + item.MenuName + "\",\"MenuImg\":\"" + "<img src=\"/Threme/Image/32/" + item.MenuImg + "\" width='16' height='16' />" + "\",\"SortCode\":\"" + item.SortCode + "\",\"NavigateUrl\":\"" + item.NavigateUrl + "\"}";
+                    MenuJson += "{\"MenuID\":\"" + item.MenuID + "\",\"MenuName\":\"" + item.MenuName + "\",\"MenuImg\":\"" + "<img src='/Threme/Image/32/" + (string.IsNullOrEmpty(item.MenuImg) ? "5005_flag.png" : item.MenuImg) + "' width='16' height='16' />" + "\",\"SortCode\":\"" + item.SortCode + "\",\"NavigateUrl\":\"" + item.NavigateUrl + "\"},";
                     GetJsonString(list, item.MenuID.ToString());
                 }
                 else if (item.ParentID == ParentID)
                 {
-                    MenuJson += "{\"MenuID\":\"" + item.MenuID + "\",\"MenuName\":\"" + item.MenuName + "\",\"MenuImg\":\"" + "<img src=\"/Threme/Image/32/" + item.MenuImg + "\" width='16' height='16' />" + "\",\"SortCode\":\"" + item.SortCode + "\",\"NavigateUrl\":\"" + item.NavigateUrl + "\",\"_parentId\":\"" + item.ParentID + "\"}";
+                    MenuJson += "{\"MenuID\":\"" + item.MenuID + "\",\"MenuName\":\"" + item.MenuName + "\",\"MenuImg\":\"" + "<img src='/Threme/Image/32/" + (string.IsNullOrEmpty(item.MenuImg) ? "5005_flag.png" : item.MenuImg) + "' width='16' height='16' />" + "\",\"SortCode\":\"" + item.SortCode + "\",\"NavigateUrl\":\"" + item.NavigateUrl + "\",\"_parentId\":\"" + item.ParentID + "\"},";
                     GetJsonString(list, item.MenuID.ToString());
                 }
             }
@@ -58,7 +58,10 @@ namespace AdminUI.BasePage.SysMenu
             List<SysMenuModel> newList = new List<SysMenuModel>();
             foreach (SysMenuModel item in list)
             {
-                newList.Add(item);
+                if (item.ParentID == ParentID && item.MenuType != -1)
+                {
+                    newList.Add(item);
+                }
             }
             return newList;
         }
