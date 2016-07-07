@@ -18,6 +18,7 @@
             $("#TreeTable").treegrid({
                 url: '/BasePage/SysMenu/GetMenuList.ashx',
                 idField: 'MenuID',
+                fit: true,
                 treeField: 'MenuName',
                 frozenColumns: [[
 		            { field: 'MenuName', title: '菜单名称', width: 300 }
@@ -35,8 +36,8 @@
     <form id="form1" runat="server">
     <div class="ManZone">
         <div class="ManTitle">菜单导航</div>
-        <div class="ManBody">
-            <table id="TreeTable" class="easyui-treegrid" style=" width: 100%; "></table>
+        <div class="ManBody" style=" height:500px; width:100%;">
+            <table id="TreeTable" class="easyui-treegrid" fit="true"></table>
         </div>
     </div>
     </form>
