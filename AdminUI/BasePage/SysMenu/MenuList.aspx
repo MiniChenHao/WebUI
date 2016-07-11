@@ -7,7 +7,6 @@
     <title></title>
     <link href="/Threme/JScript/jquery-easyui-1.4.5/themes/default/easyui.css" rel="stylesheet" type="text/css" />
     <link href="/Threme/JScript/jquery-easyui-1.4.5/themes/icon.css" rel="stylesheet" type="text/css" />
-    <link href="/Threme/JScript/mCustomScrollbar/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
     <link href="/Threme/CSS/Style.css" rel="stylesheet" type="text/css" />
     <script src="/Threme/JScript/jquery-easyui-1.4.5/jquery.min.js" type="text/javascript"></script>
     <script src="/Threme/JScript/jquery-easyui-1.4.5/jquery.easyui.min.js" type="text/javascript"></script>
@@ -15,11 +14,12 @@
     <script src="/Threme/JScript/FunctionJS.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
+            ManResize();
             $("#TreeTable").treegrid({
                 url: '/BasePage/SysMenu/GetMenuList.ashx',
                 idField: 'MenuID',
-                fit: true,
                 treeField: 'MenuName',
+                rownumbers: true,
                 frozenColumns: [[
 		            { field: 'MenuName', title: '菜单名称', width: 300 }
                 ]],
@@ -30,13 +30,42 @@
                 ]]
             });
         })
+
+        function ManResize() {
+            resizeU()
+            $(window).resize(resizeU);
+            function resizeU() {
+                var windowH = $(window).height();
+                $(".ManBody").height(windowH - 47);
+            }
+        }
+
+        function ADD() {
+            var node = $('#TreeTable').treegrid('getSelected');
+            var url = "/BasePage/SysMenu/MenuForm.aspx";
+            top.openDialog(url, "MenuForm", '导航菜单信息 - 添加', 450, 325, 50, 50);
+        }
+
+        function DELETE() {
+            top.showWarningMsg("删除");
+        }
     </script>
 </head>
 <body>
     <form id="form1" runat="server">
     <div class="ManZone">
-        <div class="ManTitle">菜单导航</div>
-        <div class="ManBody" style=" height:500px; width:100%;">
+        <div class="ManTitle">
+            菜单导航
+            <div style=" float:right; padding-right:2px; ">
+                <a title="新增" onclick="ADD()" class="button Btn-Green">
+                    <span class="btn-icon" style=" background: url('/Threme/Image/16/add.png') no-repeat center center; "></span>新增
+                </a>
+                <a title="删除" onclick="DELETE()" class="button Btn-Green">
+                    <span class="btn-icon" style=" background: url('/Threme/Image/16/delete.png') no-repeat center center; "></span>删除
+                </a>
+            </div>
+        </div>
+        <div class="ManBody" style=" width:100%;">
             <table id="TreeTable" class="easyui-treegrid" fit="true"></table>
         </div>
     </div>

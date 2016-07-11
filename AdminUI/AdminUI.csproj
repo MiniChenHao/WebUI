@@ -51,6 +51,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BasePage\SysMenu\MenuForm.aspx" />
     <Content Include="BasePage\SysMenu\MenuList.aspx" />
     <Content Include="Center.aspx" />
     <Content Include="Dashboard.aspx" />
@@ -3392,79 +3393,6 @@
     <Content Include="Threme\JScript\jquery-easyui-1.4.5\themes\metro\window.css" />
     <Content Include="Threme\JScript\jquery-easyui-1.4.5\themes\mobile.css" />
     <Content Include="Threme\JScript\MainFrame.js" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\ajax.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\ajax_example.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\auto_hide_scrollbar_demo.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\auto_scrolling_example.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\bootstrap_examples-extended.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\bootstrap_examples.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\callbacks_example.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\colorbox\colorbox.css" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\colorbox\images\border.png" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\colorbox\images\controls.png" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\colorbox\images\loading.gif" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\colorbox\images\loading_background.png" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\colorbox\images\overlay.png" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\colorbox\jquery.colorbox-min.js" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\colorbox_demo.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\complete_examples.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\disable_destroy_example.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\fluid_scrollbar_example.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\full_page_demo.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\grid_and_snap_while_scrolling_example.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\iframe_example.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\images\img1.jpg" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\images\img2.jpg" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\images\img3.jpg" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\images\img4.jpg" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\images\img5.jpg" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\images\img6.jpg" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\images\img7.jpg" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\infinite_scroll_example.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\init_hidden_example.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\init_position_example.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\jquery_ui_accordion_example.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\jquery_ui_autocomplete_example.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\jquery_ui_dialog_example.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\jquery_ui_resizable_example.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\jquery_ui_sortable_example.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\jquery_ui_tabs_example.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\keyboard_nav_example.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\loading_each_script_separately.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\loading_each_script_separately_via_cdn.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\loading_scripts_via_cdn.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\logo-alt.png" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\logo.png" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\max-height_example.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\max-width_example.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\multiple_scrollbars_example.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\nested_scrollbars_demo.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\nested_scrollbars_demo_alt.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\nested_scrollbars_demo_alt_2.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\rtl_direction_demo.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\scrollbar_themes_demo.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\scrollTo_demo.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\scroll_buttons_and_snap_scrolling_examples.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\simple_example.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\simple_example_all_params.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\style.css" />
-    <Content Include="Threme\JScript\mCustomScrollbar\examples\textarea_example.html" />
-    <Content Include="Threme\JScript\mCustomScrollbar\jquery.mCustomScrollbar.concat.min.js" />
-    <Content Include="Threme\JScript\mCustomScrollbar\jquery.mCustomScrollbar.css" />
-    <Content Include="Threme\JScript\mCustomScrollbar\jquery.mCustomScrollbar.js" />
-    <Content Include="Threme\JScript\mCustomScrollbar\jquery.mCustomScrollbar.min.css" />
-    <Content Include="Threme\JScript\mCustomScrollbar\js\minified\jquery-1.11.0.min.js" />
-    <Content Include="Threme\JScript\mCustomScrollbar\js\minified\jquery-1.9.1.min.js" />
-    <Content Include="Threme\JScript\mCustomScrollbar\js\minified\jquery-2.1.0.min.js" />
-    <Content Include="Threme\JScript\mCustomScrollbar\js\minified\jquery-ui-1.10.4.min.js" />
-    <Content Include="Threme\JScript\mCustomScrollbar\js\minified\jquery.mCustomScrollbar.min.js" />
-    <Content Include="Threme\JScript\mCustomScrollbar\js\minified\jquery.mousewheel-3.0.6.min.js" />
-    <Content Include="Threme\JScript\mCustomScrollbar\js\minified\jquery.mousewheel.min.js" />
-    <Content Include="Threme\JScript\mCustomScrollbar\js\uncompressed\jquery.mCustomScrollbar.js" />
-    <Content Include="Threme\JScript\mCustomScrollbar\js\uncompressed\jquery.mousewheel-3.0.6.js" />
-    <Content Include="Threme\JScript\mCustomScrollbar\js\uncompressed\jquery.mousewheel.js" />
-    <Content Include="Threme\JScript\mCustomScrollbar\LICENSE.txt" />
-    <Content Include="Threme\JScript\mCustomScrollbar\mCSB_buttons.png" />
     <Content Include="Threme\JScript\ShowMsg\gb_tip_layer.png" />
     <Content Include="Threme\JScript\ShowMsg\msgbox.css" />
     <Content Include="Threme\JScript\ShowMsg\msgbox.js" />
@@ -3480,6 +3408,13 @@
   <ItemGroup>
     <Compile Include="BasePage\SysMenu\GetMenuList.ashx.cs">
       <DependentUpon>GetMenuList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="BasePage\SysMenu\MenuForm.aspx.cs">
+      <DependentUpon>MenuForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasePage\SysMenu\MenuForm.aspx.designer.cs">
+      <DependentUpon>MenuForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="BasePage\SysMenu\MenuList.aspx.cs">
       <DependentUpon>MenuList.aspx</DependentUpon>
@@ -3558,12 +3493,6 @@
     <None Include="Threme\JScript\jquery-easyui-1.4.5\demo\tree\tree_data1.json" />
     <None Include="Threme\JScript\jquery-easyui-1.4.5\demo\tree\tree_data2.json" />
     <None Include="Threme\JScript\jquery-easyui-1.4.5\themes\material\images\Thumbs.db" />
-    <None Include="Threme\JScript\mCustomScrollbar\.gitignore" />
-    <None Include="Threme\JScript\mCustomScrollbar\bower.json" />
-    <None Include="Threme\JScript\mCustomScrollbar\js\minified\jquery.mCustomScrollbar.min.js.gz" />
-    <None Include="Threme\JScript\mCustomScrollbar\package.json" />
-    <None Include="Threme\JScript\mCustomScrollbar\readme.md" />
-    <None Include="Threme\JScript\mCustomScrollbar\source-files\mCSB_buttons.psd" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">

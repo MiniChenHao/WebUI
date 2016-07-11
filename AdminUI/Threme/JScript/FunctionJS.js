@@ -13,13 +13,35 @@ function TabsAdd(title, url, icon) {
     }
 }
 
+/// <summary>
+/// 警告提示
+/// </summary>
+/// <param name="msg">显示消息</param>
+/// <returns></returns>
+function showWarningMsg(msg) {
+    top.art.dialog({
+        id: 'WarningID',
+        title: '系统提示',
+        content: msg,
+        icon: 'warning',
+        time: 10,
+        background: '#000',
+        opacity: 0.1,
+        lock: true,
+        okVal: '关闭',
+        ok: true
+    });
+}
 
-//警告提示
-//msg: 显示消息
-//callBack：函数
+/// <summary>
+/// 确认提示
+/// </summary>
+/// <param name="msg">显示消息</param>
+/// <param name="callBack">回调函数</param>
+/// <returns></returns>
 function showConfirmMsg(msg, callBack) {
     top.art.dialog({
-        id: 'confirmId',
+        id: 'ConfirmID',
         title: '系统提示',
         content: msg,
         icon: 'warning',
@@ -40,6 +62,33 @@ function showConfirmMsg(msg, callBack) {
             }
         }]
     });
+}
+
+/// <summary>
+/// 弹出网页
+/// </summary>
+/// <param name="url">显示消息</param>
+/// <param name="_id">回调函数</param>
+/// <param name="_title">标题名称</param>
+/// <param name="width">宽度</param>
+/// <param name="height">高度</param>
+/// <param name="left">左边缘</param>
+/// <param name="top">顶部边缘</param>
+/// <returns></returns>
+function openDialog(url, _id, _title, _width, _height, left, top) {
+    art.dialog.open(url, {
+        id: _id,
+        title: _title,
+        width: _width,
+        height: _height,
+        left: left + '%',
+        top: top + '%',
+        background: '#000000',
+        opacity: 0.1,
+        lock: true,
+        resize: false,
+        close: function () { }
+    }, false);
 }
 
 

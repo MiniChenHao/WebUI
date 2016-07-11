@@ -1,13 +1,11 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="AdminUI.Index" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>通用权限管理系统</title>
     <link href="/Threme/JScript/JQuertUI/jquery-ui.css" rel="stylesheet" type="text/css" />
     <link href="/Threme/JScript/JQuertUI/layout-latest.css" rel="stylesheet" type="text/css" />
-    <link href="/Threme/JScript/ShowMsg/msgbox.css" rel="stylesheet" type="text/css" />
     <link href="/Threme/JScript/artDialog/skins/blue.css" rel="stylesheet" type="text/css" />
     <link href="/Threme/CSS/MainFrame.css" rel="stylesheet" type="text/css" />
     <script src="/Threme/JScript/jquery-1.12.3.min.js" type="text/javascript"></script>
@@ -63,12 +61,12 @@
     <form id="form1" runat="server">
     <div class="ui-layout-center">
         <iframe id="Center" src="Center.aspx" scrolling="auto" frameborder="0" width="100%" height="100%"></iframe>
-    </div>  
+    </div>
     <div class="ui-layout-north">
         <div class="NorthHeader">
             <div class="Logo">通用权限管理系统</div>
             <div class="Menu">
-                <table cellpadding="0" cellspacing="0" style=" height: 60px; padding: 0px;">
+                <table cellpadding="0" cellspacing="0" style="height: 60px; padding: 0px;">
                     <tbody>
                         <tr valign="bottom">
                             <td>
@@ -92,8 +90,7 @@
                 <div id="LoginUser">
                     <img src="/Threme/Image/sun_2.png" alt="" width="20" height="20" />
                     <label id="Greetings"></label>
-                    <label id="UserName" runat="server">谌昊</label>
-                    欢迎登录系统！
+                    <label id="UserName" runat="server">谌昊</label>欢迎登录系统！
                 </div>
                 <div id="Logout">
                     <img src="/Threme/Image/refresh.png" width="20" height="20" title="刷新" alt="刷新" onclick="RefreshCenter();" />
@@ -101,12 +98,12 @@
                 </div>
             </div>
         </div>
-    </div>  
-    <div class="ui-layout-south">South</div>  
-    <div class="ui-layout-east">East</div>  
+    </div>
+    <div class="ui-layout-south">South</div>
+    <div class="ui-layout-east">East</div>
     <div class="ui-layout-west">
         <iframe id="West" src="West.aspx" scrolling="auto" frameborder="0" width="100%" height="100%"></iframe>
-    </div> 
+    </div>
     </form>
 </body>
 </html>

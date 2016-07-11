@@ -38,6 +38,14 @@
                 </tr>
             </tbody>
         </table>
+
+        <a title="新增" onclick="ADD()" class="button Btn-Green">
+            <span class="btn-icon icon-add"></span>新增
+        </a>
+        
+        <a title="新增" onclick="ADD()" class="button Btn-Green">
+            <span class="btn-icon" style=" background: url('/Threme/Image/16/add.png') no-repeat center center; "></span>新增
+        </a>
     </div>
     </form>
 </body>
