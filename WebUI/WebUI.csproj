@@ -53,9 +53,18 @@
   <ItemGroup>
     <Content Include="Calendar\Index.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="E-Notes\Index.html" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Threme\JScript\Bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Threme\JScript\Bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Threme\JScript\Bootstrap\css\bootstrap.css" />
+    <Content Include="Threme\JScript\Bootstrap\css\bootstrap.min.css" />
+    <Content Include="Threme\JScript\Bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Threme\JScript\Bootstrap\js\bootstrap.js" />
+    <Content Include="Threme\JScript\Bootstrap\js\bootstrap.min.js" />
+    <Content Include="Threme\JScript\Bootstrap\js\npm.js" />
     <Content Include="Threme\JScript\fancybox\css\fancybox.css" />
     <Content Include="Threme\JScript\fancybox\css\images\animated-overlay.gif" />
     <Content Include="Threme\JScript\fancybox\css\images\blank.gif" />
@@ -384,6 +393,14 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Threme\JScript\Bootstrap\css\bootstrap-theme.css.map" />
+    <None Include="Threme\JScript\Bootstrap\css\bootstrap-theme.min.css.map" />
+    <None Include="Threme\JScript\Bootstrap\css\bootstrap.css.map" />
+    <None Include="Threme\JScript\Bootstrap\css\bootstrap.min.css.map" />
+    <None Include="Threme\JScript\Bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Threme\JScript\Bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="Threme\JScript\Bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Threme\JScript\Bootstrap\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Threme\JScript\FullCalendar\demos\json\events.json" />
     <None Include="Threme\JScript\FullCalendar\demos\php\get-events.php" />
     <None Include="Threme\JScript\FullCalendar\demos\php\get-timezones.php" />

@@ -43,7 +43,7 @@
         function ADD() {
             var node = $('#TreeTable').treegrid('getSelected');
             var url = "/BasePage/SysMenu/MenuForm.aspx";
-            top.openDialog(url, "MenuForm", '导航菜单信息 - 添加', 450, 325, 50, 50);
+            top.openDialog(url, "MenuForm", '导航菜单信息 - 添加', 'auto', 'auto', 50, 50);
         }
 
         function DELETE() {

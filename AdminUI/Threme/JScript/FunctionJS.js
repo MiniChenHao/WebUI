@@ -70,8 +70,8 @@ function showConfirmMsg(msg, callBack) {
 /// <param name="url">显示消息</param>
 /// <param name="_id">回调函数</param>
 /// <param name="_title">标题名称</param>
-/// <param name="width">宽度</param>
-/// <param name="height">高度</param>
+/// <param name="width">宽度 'auto'自动适应 最小308</param>
+/// <param name="height">高度 'auto'自动适应 最小150</param>
 /// <param name="left">左边缘</param>
 /// <param name="top">顶部边缘</param>
 /// <returns></returns>

@@ -9,7 +9,6 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    导航菜单信息 - 添加
     </div>
     </form>
 </body>
