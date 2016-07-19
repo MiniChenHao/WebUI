@@ -41,9 +41,19 @@
         }
 
         function ADD() {
-            var node = $('#TreeTable').treegrid('getSelected');
-            var url = "/BasePage/SysMenu/MenuForm.aspx";
+            var SelectNode = $('#TreeTable').treegrid('getSelected');
+            var url = "/BasePage/SysMenu/MenuForm.aspx?ParentID=" + (SelectNode == null ? "" : escape(SelectNode.MenuID));
             top.openDialog(url, "MenuForm", '导航菜单信息 - 添加', 'auto', 'auto', 50, 50);
+        }
+
+        function EDIT() {
+            var SelectNode = $('#TreeTable').treegrid('getSelected');
+            if (SelectNode != null) {
+                alert(SelectNode.MenuID);
+            }
+            else {
+                alert("sadfasdf"); 
+            }
         }
 
         function DELETE() {
@@ -61,6 +71,9 @@
             <div style=" float:right; padding-right:2px; ">
                 <a title="新增" onclick="ADD()" class="button Btn-Green">
                     <span class="btn-icon" style=" background: url('/Threme/Image/16/add.png') no-repeat center center; "></span>新增
+                </a>
+                <a title="编辑" onclick="EDIT()" class="button Btn-Green">
+                    <span class="btn-icon" style=" background: url('/Threme/Image/16/edit.png') no-repeat center center; "></span>编辑
                 </a>
                 <a title="删除" onclick="DELETE()" class="button Btn-Green">
                     <span class="btn-icon" style=" background: url('/Threme/Image/16/delete.png') no-repeat center center; "></span>删除

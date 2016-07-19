@@ -5,10 +5,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link href="/Threme/CSS/Style.css" rel="stylesheet" type="text/css" />
+    <script src="/Threme/JScript/jquery-1.12.3.min.js" type="text/javascript"></script>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
+    <div class="ManZone">
+        <div class="ManBody" style=" width:100%;">
+            <label runat="server" id="lbParentID"></label>
+        </div>
     </div>
     </form>
 </body>
