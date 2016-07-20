@@ -5,16 +5,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link href="/Threme/JScript/FullCalendar/fullcalendar.css" rel="stylesheet" type="text/css" />
-    <link href="/Threme/JScript/FullCalendar/fullcalendar.print.css" rel="stylesheet" type="text/css" media='print' />
-    <link href="/Threme/JScript/fancybox/css/fancybox.css" rel="stylesheet" type="text/css" />
-    <script src="/Threme/JScript/jquery-1.12.3.min.js" type="text/javascript"></script>
-    <script src="/Threme/JScript/FullCalendar/lib/moment.min.js" type="text/javascript"></script>
-    <script src="/Threme/JScript/FullCalendar/lib/jquery-ui.custom.min.js" type="text/javascript"></script>
-    <script src="/Threme/JScript/FullCalendar/fullcalendar.min.js" type="text/javascript"></script>
-    <script src="/Threme/JScript/FullCalendar/lang-all.js" type="text/javascript"></script>
-    <script src="/Threme/JScript/fancybox/js/jquery.fancybox-1.3.1.pack.js" type="text/javascript"></script>
-    <script src="/Threme/JScript/FunctionJS.js" type="text/javascript"></script>
+    <link href="/Theme/JScript/FullCalendar/fullcalendar.css" rel="stylesheet" type="text/css" />
+    <link href="/Theme/JScript/FullCalendar/fullcalendar.print.css" rel="stylesheet" type="text/css" media='print' />
+    <link href="/Theme/JScript/fancybox/css/fancybox.css" rel="stylesheet" type="text/css" />
+    <script src="/Theme/JScript/jquery-1.12.3.min.js" type="text/javascript"></script>
+    <script src="/Theme/JScript/FullCalendar/lib/moment.min.js" type="text/javascript"></script>
+    <script src="/Theme/JScript/FullCalendar/lib/jquery-ui.custom.min.js" type="text/javascript"></script>
+    <script src="/Theme/JScript/FullCalendar/fullcalendar.min.js" type="text/javascript"></script>
+    <script src="/Theme/JScript/FullCalendar/lang-all.js" type="text/javascript"></script>
+    <script src="/Theme/JScript/fancybox/js/jquery.fancybox-1.3.1.pack.js" type="text/javascript"></script>
+    <script src="/Theme/JScript/FunctionJS.js" type="text/javascript"></script>
     <script type="text/javascript">
         var myDate = new Date();
         var DateNow = myDate.Format("yyyy-MM-dd");

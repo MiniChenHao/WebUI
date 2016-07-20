@@ -91,6 +91,13 @@ function openDialog(url, _id, _title, _width, _height, left, top) {
     }, false);
 }
 
+/// <summary>
+/// 窗口关闭
+/// </summary>
+function OpenClose() {
+    art.dialog.close();
+}
+
 
 //获取Url参数
 function GetQueryString(name) {

@@ -40,7 +40,7 @@ namespace AdminUI
             {
                 if (item.ParentID == ParentID)
                 {
-                    Result += "<ul class=\"menu_title\"><img src=\"/Threme/Image/32/" + (item.MenuImg == "" ? "189.png" : item.MenuImg) + "\" width='16' height='16' />" + item.MenuName + "</ul>";
+                    Result += "<ul class=\"menu_title\"><img src=\"/Theme/Image/32/" + (item.MenuImg == "" ? "189.png" : item.MenuImg) + "\" width='16' height='16' />" + item.MenuName + "</ul>";
                     Result += GetChildMenu(list, item.MenuID.ToString());
                 }
             }
@@ -54,7 +54,7 @@ namespace AdminUI
             {
                 if (item.ParentID == ParentID)
                 {
-                    Result += "<li onclick=\"NavMenuUrl('" + item.NavigateUrl + "','" + item.MenuName + "')\"><img src=\"/Threme/Image/32/" + item.MenuImg + "\" width='22' height='22' />" + item.MenuName + "</li>";
+                    Result += "<li onclick=\"NavMenuUrl('" + item.NavigateUrl + "','" + item.MenuName + "')\"><img src=\"/Theme/Image/32/" + item.MenuImg + "\" width='22' height='22' />" + item.MenuName + "</li>";
                 }
             }
             Result += "</ul>";

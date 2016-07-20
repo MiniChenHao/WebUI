@@ -5,8 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title></title>
-    <link href="/Threme/CSS/Style.css" rel="stylesheet" type="text/css" />
-    <script src="/Threme/JScript/jquery-1.12.3.min.js" type="text/javascript"></script>
+    <link href="/Theme/CSS/Style.css" rel="stylesheet" type="text/css" />
+    <script src="/Theme/JScript/jquery-1.12.3.min.js" type="text/javascript"></script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -44,7 +44,7 @@
         </a>
         
         <a title="新增" onclick="ADD()" class="button Btn-Green">
-            <span class="btn-icon" style=" background: url('/Threme/Image/16/add.png') no-repeat center center; "></span>新增
+            <span class="btn-icon" style=" background: url('/Theme/Image/16/add.png') no-repeat center center; "></span>新增
         </a>
     </div>
     </form>

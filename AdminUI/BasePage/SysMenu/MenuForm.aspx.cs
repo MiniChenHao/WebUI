@@ -12,7 +12,6 @@ namespace AdminUI.BasePage.SysMenu
         protected void Page_Load(object sender, EventArgs e)
         {
             string ParentID = Request["ParentID"].ToString();
-            lbParentID.InnerText = ParentID;
         }
     }
 }

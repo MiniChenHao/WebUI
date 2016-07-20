@@ -1,0 +1,54 @@
+﻿/**分页 begin**/
+.pagination
+{
+    font-family: 微软雅黑, 宋体, Arial, Helvetica, Verdana, sans-serif;
+    color: #000000;
+    font-size: 9pt;
+    border-left: solid 1px #ccc;
+    border-right: solid 1px #ccc;
+    background-image: url('/Theme/image/datagrid_header_bg.gif');
+    background-repeat: repeat-x;
+    height: 27px;
+    width: auto;
+}
+.pagination-btn-separator
+{
+    float: left;
+    height: 24px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #fff;
+    margin: 1px;
+}
+.first
+{
+    /*display: inline-block;*/
+    width: 12px;
+    height: 12px;
+    background: url('/Theme/Image/first.gif') no-repeat 0px 2px;
+    cursor: pointer;
+}
+.prev
+{
+    /*display: inline-block;*/
+    width: 12px;
+    height: 12px;
+    background: url('/Theme/Image/prev.gif') no-repeat 0px 2px;
+    cursor: pointer;
+}
+.next
+{
+    /*display: inline-block;*/
+    width: 12px;
+    height: 12px;
+    background: url('/Theme/Image/next.gif') no-repeat 0px 2px;
+    cursor: pointer;
+}
+.last
+{
+    /*display: inline-block;*/
+    width: 12px;
+    height: 12px;
+    background: url('/Theme/Image/last.gif') no-repeat 0px 2px;
+    cursor: pointer;
+}
+/**分页 end**/

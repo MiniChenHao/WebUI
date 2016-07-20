@@ -42,12 +42,12 @@ namespace AdminUI.BasePage.SysMenu
             {
                 if (item.ParentID == "0")
                 {
-                    MenuJson += "{\"MenuID\":\"" + item.MenuID + "\",\"MenuName\":\"" + item.MenuName + "\",\"MenuImg\":\"" + "<img src='/Threme/Image/32/" + (string.IsNullOrEmpty(item.MenuImg) ? "5005_flag.png" : item.MenuImg) + "' width='16' height='16' />" + "\",\"SortCode\":\"" + item.SortCode + "\",\"NavigateUrl\":\"" + item.NavigateUrl + "\"},";
+                    MenuJson += "{\"MenuID\":\"" + item.MenuID + "\",\"MenuName\":\"" + item.MenuName + "\",\"MenuImg\":\"" + "<img src='/Theme/Image/32/" + (string.IsNullOrEmpty(item.MenuImg) ? "5005_flag.png" : item.MenuImg) + "' width='16' height='16' />" + "\",\"SortCode\":\"" + item.SortCode + "\",\"NavigateUrl\":\"" + item.NavigateUrl + "\"},";
                     GetJsonString(list, item.MenuID.ToString());
                 }
                 else if (item.ParentID == ParentID)
                 {
-                    MenuJson += "{\"MenuID\":\"" + item.MenuID + "\",\"MenuName\":\"" + item.MenuName + "\",\"MenuImg\":\"" + "<img src='/Threme/Image/32/" + (string.IsNullOrEmpty(item.MenuImg) ? "5005_flag.png" : item.MenuImg) + "' width='16' height='16' />" + "\",\"SortCode\":\"" + item.SortCode + "\",\"NavigateUrl\":\"" + item.NavigateUrl + "\",\"_parentId\":\"" + item.ParentID + "\"},";
+                    MenuJson += "{\"MenuID\":\"" + item.MenuID + "\",\"MenuName\":\"" + item.MenuName + "\",\"MenuImg\":\"" + "<img src='/Theme/Image/32/" + (string.IsNullOrEmpty(item.MenuImg) ? "5005_flag.png" : item.MenuImg) + "' width='16' height='16' />" + "\",\"SortCode\":\"" + item.SortCode + "\",\"NavigateUrl\":\"" + item.NavigateUrl + "\",\"_parentId\":\"" + item.ParentID + "\"},";
                     GetJsonString(list, item.MenuID.ToString());
                 }
             }

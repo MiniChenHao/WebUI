@@ -4,18 +4,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>通用权限管理系统</title>
-    <link href="/Threme/JScript/JQuertUI/jquery-ui.css" rel="stylesheet" type="text/css" />
-    <link href="/Threme/JScript/JQuertUI/layout-latest.css" rel="stylesheet" type="text/css" />
-    <link href="/Threme/JScript/artDialog/skins/blue.css" rel="stylesheet" type="text/css" />
-    <link href="/Threme/CSS/MainFrame.css" rel="stylesheet" type="text/css" />
-    <script src="/Threme/JScript/jquery-1.12.3.min.js" type="text/javascript"></script>
-    <script src="/Threme/JScript/JQuertUI/external/jquery/jquery.js" type="text/javascript"></script>
-    <script src="/Threme/JScript/JQuertUI/jquery-ui.js" type="text/javascript"></script>
-    <script src="/Threme/JScript/JQuertUI/jquery.layout-latest.js" type="text/javascript"></script>
-    <script src="/Threme/JScript/artDialog/artDialog.source.js" type="text/javascript"></script>
-    <script src="/Threme/JScript/artDialog/iframeTools.source.js" type="text/javascript"></script>
-    <script src="/Threme/JScript/FunctionJS.js" type="text/javascript"></script>
-    <script src="/Threme/JScript/MainFrame.js" type="text/javascript"></script>
+    <link href="/Theme/JScript/JQuertUI/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link href="/Theme/JScript/JQuertUI/layout-latest.css" rel="stylesheet" type="text/css" />
+    <link href="/Theme/JScript/artDialog/skins/blue.css" rel="stylesheet" type="text/css" />
+    <link href="/Theme/CSS/MainFrame.css" rel="stylesheet" type="text/css" />
+    <script src="/Theme/JScript/jquery-1.12.3.min.js" type="text/javascript"></script>
+    <script src="/Theme/JScript/JQuertUI/external/jquery/jquery.js" type="text/javascript"></script>
+    <script src="/Theme/JScript/JQuertUI/jquery-ui.js" type="text/javascript"></script>
+    <script src="/Theme/JScript/JQuertUI/jquery.layout-latest.js" type="text/javascript"></script>
+    <script src="/Theme/JScript/artDialog/artDialog.source.js" type="text/javascript"></script>
+    <script src="/Theme/JScript/artDialog/iframeTools.source.js" type="text/javascript"></script>
+    <script src="/Theme/JScript/FunctionJS.js" type="text/javascript"></script>
+    <script src="/Theme/JScript/MainFrame.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('body').layout({
@@ -83,18 +83,18 @@
         </div>
         <div class="NorthFooter">
             <div class="Time">
-                <img src="/Threme/Image/clock_32.png" alt="" height="20" width="20" />
+                <img src="/Theme/Image/clock_32.png" alt="" height="20" width="20" />
                 <span id="DateTime"></span>
             </div>
             <div class="News">
                 <div id="LoginUser">
-                    <img src="/Threme/Image/sun_2.png" alt="" width="20" height="20" />
+                    <img src="/Theme/Image/sun_2.png" alt="" width="20" height="20" />
                     <label id="Greetings"></label>
                     <label id="UserName" runat="server">谌昊</label>欢迎登录系统！
                 </div>
                 <div id="Logout">
-                    <img src="/Threme/Image/refresh.png" width="20" height="20" title="刷新" alt="刷新" onclick="RefreshCenter();" />
-                    <img src="/Threme/Image/button-white-stop.png" width="20" height="20" title="安全退出" alt="安全退出" onclick="LogOut();" />
+                    <img src="/Theme/Image/refresh.png" width="20" height="20" title="刷新" alt="刷新" onclick="RefreshCenter();" />
+                    <img src="/Theme/Image/button-white-stop.png" width="20" height="20" title="安全退出" alt="安全退出" onclick="LogOut();" />
                 </div>
             </div>
         </div>

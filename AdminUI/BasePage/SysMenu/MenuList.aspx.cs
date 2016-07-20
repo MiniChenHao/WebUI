@@ -33,7 +33,7 @@ namespace AdminUI.BasePage.SysMenu
             string Result = "{\"total\":\"" + model.OUTTotalCount + "\",\"rows\":[";
             foreach (SysMenuModel item in list)
             {
-                Result += "{\"MenuID\":\"" + item.MenuID + "\",\"MenuName\":\"" + item.MenuName + "\",\"MenuImg\":\"" + "<img src=\"/Threme/Image/32/" + item.MenuImg + "\" width='16' height='16' />" + "\",\"SortCode\":\"" + item.SortCode + "\",\"NavigateUrl\":\"" + item.NavigateUrl + "\",\"_parentId\":\"" + item.ParentID + "\"}";
+                Result += "{\"MenuID\":\"" + item.MenuID + "\",\"MenuName\":\"" + item.MenuName + "\",\"MenuImg\":\"" + "<img src=\"/Theme/Image/32/" + item.MenuImg + "\" width='16' height='16' />" + "\",\"SortCode\":\"" + item.SortCode + "\",\"NavigateUrl\":\"" + item.NavigateUrl + "\",\"_parentId\":\"" + item.ParentID + "\"}";
             }
             Result += "]}";
             return Result;

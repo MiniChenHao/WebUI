@@ -10,7 +10,7 @@
 namespace AdminUI.BasePage.SysMenu {
     
     
-    public partial class MenuForm {
+    public partial class Icons_List {
         
         /// <summary>
         /// form1 控件。
@@ -22,21 +22,21 @@ namespace AdminUI.BasePage.SysMenu {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// MenuImgUrl 控件。
+        /// hidden_Size 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputHidden MenuImgUrl;
+        protected global::System.Web.UI.HtmlControls.HtmlInputHidden hidden_Size;
         
         /// <summary>
-        /// Img_Menu_Img 控件。
+        /// PageControl1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage Img_Menu_Img;
+        protected global::AdminUI.UserControl.PageControl PageControl1;
     }
 }

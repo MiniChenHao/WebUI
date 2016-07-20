@@ -5,9 +5,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link href="/Threme/JScript/JQuertUI/jquery-ui.css" rel="stylesheet" type="text/css" />
-    <script src="/Threme/JScript/JQuertUI/external/jquery/jquery.js" type="text/javascript"></script>
-    <script src="/Threme/JScript/JQuertUI/jquery-ui.js" type="text/javascript"></script>
+    <link href="/Theme/JScript/JQuertUI/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script src="/Theme/JScript/JQuertUI/external/jquery/jquery.js" type="text/javascript"></script>
+    <script src="/Theme/JScript/JQuertUI/jquery-ui.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $(this).height($(window).height());
