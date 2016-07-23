@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link href="/Theme/CSS/Style.css" rel="stylesheet" type="text/css" />
+    <link href="/Theme/CSS/Style.css?V=1.0" rel="stylesheet" type="text/css" />
     <script src="/Theme/JScript/jquery-1.12.3.min.js" type="text/javascript"></script>
     <script type="text/javascript">
         //全取系统图标
@@ -30,19 +30,25 @@
                     <tr>
                         <th align="right">菜单名称:</th>
                         <td align="left">
-                            <input type="text" />
+                            <input type="text" runat="server" id="MenuName" class="T_Input" />
                         </td>
                     </tr>
                     <tr>
                         <th align="right">菜单父级:</th>
                         <td align="left">
-                            <input type="text" />
+                            <input type="text" runat="server" id="ParentID" class="T_Input" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th align="right">菜单类型:</th>
+                        <td align="left">
+                            <select id="MenuType" runat="server" class="S_Input"></select>
                         </td>
                     </tr>
                     <tr>
                         <th align="right">菜单图标:</th>
                         <td align="left">
-                            <input id="MenuImgUrl" type="hidden" runat="server" />
+                            <input id="MenuImg" type="hidden" runat="server" />
                             <img id="Img_Menu_Img" src="/Theme/Image/illustration.png" runat="server" alt="" style="vertical-align: middle; padding-right: 10px;" />
                             <a href="javascript:void(0)" class="button Btn-Green" onclick="SelectOpenImg()">图标全取</a>
                         </td>
@@ -50,13 +56,13 @@
                     <tr>
                         <th align="right">排序:</th>
                         <td align="left">
-                            <input type="text" />
+                            <input type="text" runat="server" id="SortCode" class="T_Input" />
                         </td>
                     </tr>
                     <tr>
                         <th align="right">链接地址:</th>
                         <td align="left">
-                            <input type="text" />
+                            <textarea runat="server" id="NavigateUrl" rows="3" cols="25"></textarea>
                         </td>
                     </tr>
                 </tbody>

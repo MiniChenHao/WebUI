@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using SysModel;
 using SysBLL;
+using Common.NetEnum;
 
 namespace AdminUI.BasePage.SysMenu
 {
@@ -24,6 +25,7 @@ namespace AdminUI.BasePage.SysMenu
 
         public void DateLoad()
         {
+            model.DeleteFlag = Convert.ToInt32(SysEnum.DeleteFlag.NotRemoved);
             List<SysMenuModel> MenuList = SMBll.GetMenuList(model);
             IListToJson(MenuList);
         }

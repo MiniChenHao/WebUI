@@ -22,12 +22,12 @@ namespace Common.NetEnum
             Other = 5,
         }
 
-        public enum DeleteMark
+        public enum DeleteFlag
         {
-            [Description("已删除")]
-            Deleted = 0,
             [Description("未删除")]
-            NotRemoved = 1,
+            NotRemoved = 0,
+            [Description("已删除")]
+            Deleted = 1,
         }
     }
 }
