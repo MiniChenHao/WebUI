@@ -15,19 +15,37 @@ namespace AdminUI.BasePage.SysMenu
     {
         SysMenuBLL SMBll = new SysMenuBLL();
         SysMenuModel model = new SysMenuModel();
+        List<SysMenuModel> MenuList = new List<SysMenuModel>();
         public string MenuJson = "";
         public void ProcessRequest(HttpContext context)
         {
             context.Response.ContentType = "text/plain";
+            string Type = context.Request["Type"] == null ? "" : context.Request["Type"];
+            string MID = context.Request["MID"] == null ? "" : context.Request["MID"];
             DateLoad();
+            switch (Type)
+            {
+                case "MenuList":
+                    IListToJson(MenuList);
+                    break;
+                case "MenuDropDownList":
+                    if (MID != "")
+                    {
+                        BindSelect(MenuList.Where(p => p.MenuID.ToString() != MID).ToList(), "0", 0);
+                    }
+                    else
+                    {
+                        BindSelect(MenuList, "0", 0);
+                    }
+                    break;
+            }
             context.Response.Write(MenuJson);
         }
 
         public void DateLoad()
         {
             model.DeleteFlag = Convert.ToInt32(SysEnum.DeleteFlag.NotRemoved);
-            List<SysMenuModel> MenuList = SMBll.GetMenuList(model);
-            IListToJson(MenuList);
+            MenuList = SMBll.GetMenuList(model);
         }
 
         public void IListToJson(List<SysMenuModel> list)
@@ -66,6 +84,31 @@ namespace AdminUI.BasePage.SysMenu
                 }
             }
             return newList;
+        }
+
+        public void BindSelect(List<SysMenuModel> dt, string Pid, int Level)
+        {
+            List<SysMenuModel> List = dt.Where(p => p.ParentID == Pid && p.MenuType > 0).ToList();
+            if (List.Count > 0 && Level == 0)
+            {
+                MenuJson += "[{\"id\":\"0\",\"text\":\"-根目录-\"},";
+            }
+            else if (List.Count > 0 && Level > 0)
+            {
+                MenuJson += ",\"children\":[";
+            }
+            foreach (SysMenuModel model in List)
+            {
+                MenuJson += "{\"id\":\"" + model.MenuID + "\",\"text\":\"" + model.MenuName + "\"";
+                Level++;
+                BindSelect(dt, model.MenuID.ToString(), Level);
+                MenuJson += "},";
+            }
+            if (List.Count > 0 && Level > 0)
+            {
+                MenuJson = MenuJson.TrimEnd(',');
+                MenuJson += "]";
+            }
         }
 
         public bool IsReusable

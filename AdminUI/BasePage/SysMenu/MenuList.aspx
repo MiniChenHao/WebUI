@@ -14,9 +14,9 @@
     <script src="/Theme/JScript/FunctionJS.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            ManResize();
+            MainResize();
             $("#TreeTable").treegrid({
-                url: '/BasePage/SysMenu/GetMenuList.ashx',
+                url: '/BasePage/SysMenu/GetMenuList.ashx?Type=MenuList',
                 idField: 'MenuID',
                 treeField: 'MenuName',
                 rownumbers: true,
@@ -31,29 +31,25 @@
             });
         })
 
-        function ManResize() {
+        function MainResize() {
             resizeU()
             $(window).resize(resizeU);
             function resizeU() {
                 var windowH = $(window).height();
-                $(".ManBody").height(windowH - 47);
+                $(".MainBody").height(windowH - 47);
             }
         }
 
         function ADD() {
             var SelectNode = $('#TreeTable').treegrid('getSelected');
-            var url = "/BasePage/SysMenu/MenuForm.aspx?ParentID=" + (SelectNode == null ? "" : escape(SelectNode.MenuID));
+            var url = "/BasePage/SysMenu/MenuForm.aspx?PID=" + (SelectNode == null ? "" : escape(SelectNode.MenuID));
             top.openDialog(url, "MenuForm", '导航菜单信息 - 添加', 450, 325, 50, 50);
         }
 
         function EDIT() {
             var SelectNode = $('#TreeTable').treegrid('getSelected');
-            if (SelectNode != null) {
-                alert(SelectNode.MenuID);
-            }
-            else {
-                alert("sadfasdf"); 
-            }
+            var url = "/BasePage/SysMenu/MenuForm.aspx?MID=" + (SelectNode == null ? "" : escape(SelectNode.MenuID));
+            top.openDialog(url, "MenuForm", '导航菜单信息 - 编辑', 450, 325, 50, 50);
         }
 
         function DELETE() {
@@ -65,8 +61,8 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div class="ManZone">
-        <div class="ManTitle">
+    <div class="MainZone">
+        <div class="MainTitle">
             菜单导航
             <div style=" float:right; padding-right:2px; ">
                 <a title="新增" onclick="ADD()" class="button Btn-Green">
@@ -80,7 +76,7 @@
                 </a>
             </div>
         </div>
-        <div class="ManBody" style=" width:100%;">
+        <div class="MainBody" style=" width:100%;">
             <table id="TreeTable" class="easyui-treegrid" fit="true"></table>
         </div>
     </div>

@@ -57,6 +57,7 @@
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Theme\CSS\NoteStyle.css" />
     <Content Include="Theme\JScript\Bootstrap\css\bootstrap-theme.css" />
     <Content Include="Theme\JScript\Bootstrap\css\bootstrap-theme.min.css" />
     <Content Include="Theme\JScript\Bootstrap\css\bootstrap.css" />

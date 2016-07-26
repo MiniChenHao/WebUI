@@ -6,8 +6,25 @@
 <head runat="server">
     <title></title>
     <link href="/Theme/CSS/Style.css?V=1.0" rel="stylesheet" type="text/css" />
+    <link href="/Theme/JScript/jquery-easyui-1.4.5/themes/default/easyui.css" rel="stylesheet"type="text/css" />
+    <link href="/Theme/JScript/jquery-easyui-1.4.5/themes/icon.css" rel="stylesheet" type="text/css" />
     <script src="/Theme/JScript/jquery-1.12.3.min.js" type="text/javascript"></script>
+    <script src="/Theme/JScript/jquery-easyui-1.4.5/jquery.easyui.min.js" type="text/javascript"></script>
+    <script src="/Theme/JScript/jquery-validation-1.14.0/dist/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="/Theme/JScript/jquery-validation-1.14.0/dist/localization/messages_zh.js" type="text/javascript"></script>
+    <script src="/Theme/JScript/FunctionJS.js" type="text/javascript"></script>
     <script type="text/javascript">
+        $(document).ready(function () {
+            $("#form1").validate();
+            var MID = GetQueryString("MID");
+            $("#ParentTree").combotree({
+                url: '/BasePage/SysMenu/GetMenuList.ashx?Type=MenuDropDownList&MID=' + (MID == null ? "" : MID),
+                onChange: function (newValue, oldValue) {
+                    $("#ParentID").val(newValue);
+                    alert(newValue);
+                }
+            })
+        })
         //全取系统图标
         function SelectOpenImg() {
             var url = "/BasePage/SysMenu/Icons_List.aspx?Size=32";
@@ -22,27 +39,28 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div class="ManZone">
-        <div class="ManTitle"></div>
-        <div class="ManBody" style=" width:100%;">
+    <div class="MainZone">
+        <div class="MainTitle"></div>
+        <div class="MainBody" style=" width:100%;">
             <table class="FormTable" cellspacing="0" cellpadding="3">
                 <tbody>
                     <tr>
                         <th align="right">菜单名称:</th>
                         <td align="left">
-                            <input type="text" runat="server" id="MenuName" class="T_Input" />
+                            <input type="text" runat="server" id="MenuName" class="T_Input" required />
                         </td>
                     </tr>
                     <tr>
                         <th align="right">菜单父级:</th>
                         <td align="left">
-                            <input type="text" runat="server" id="ParentID" class="T_Input" />
+                            <input id="ParentID" type="hidden" runat="server" />
+                            <input id="ParentTree" runat="server" style=" width: 233px;" />
                         </td>
                     </tr>
                     <tr>
                         <th align="right">菜单类型:</th>
                         <td align="left">
-                            <select id="MenuType" runat="server" class="S_Input"></select>
+                            <select id="MenuType" runat="server" class="S_Input" required ></select>
                         </td>
                     </tr>
                     <tr>
@@ -56,7 +74,7 @@
                     <tr>
                         <th align="right">排序:</th>
                         <td align="left">
-                            <input type="text" runat="server" id="SortCode" class="T_Input" />
+                            <input type="text" runat="server" id="SortCode" class="T_Input" required />
                         </td>
                     </tr>
                     <tr>
@@ -67,6 +85,9 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
+        <div class="MainFoot" style=" text-align: center; ">
+            <button ID="Save" runat="server">保 存</button>
         </div>
     </div>
     </form>

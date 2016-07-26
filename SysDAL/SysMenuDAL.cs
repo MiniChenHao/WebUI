@@ -5,6 +5,8 @@ using System.Text;
 using SysModel;
 using Microsoft.Practices.EnterpriseLibrary.Data;
 using System.Data.Common;
+using Common.NetEnum;
+using System.Data;
 
 namespace SysDAL
 {
@@ -14,7 +16,7 @@ namespace SysDAL
 
         public List<SysMenuModel> GetMenuList(SysMenuModel model)
         {
-            List<SysMenuModel> List=new List<SysMenuModel>();
+            List<SysMenuModel> List = new List<SysMenuModel>();
             string[] strPara = new string[] { "@MenuID", "@ParentID", "@MenuName", "@MenuType", "@DeleteFlag", "@OUTTotalCount" };
             ParameterMapper mapper = new ParameterMapper(strPara);
             var ObjectModel = db.CreateSprocAccessor<SysMenuModel>("PROC_T_SYS_GetMenuList", mapper, MapBuilder<SysMenuModel>.MapNoProperties()
@@ -34,6 +36,22 @@ namespace SysDAL
             List = ObjectModel.Execute(param).ToList<SysMenuModel>();
             model.OUTTotalCount = int.Parse(mapper.GetParameterValue("@OUTTotalCount").ToString());
             return List;
+        }
+
+        public int MenuAction(SysMenuModel model, SysEnum.ActionType actionType)
+        {
+            DbCommand cmd = db.GetStoredProcCommand("PROC_T_SYS_MenuEdit");
+            db.AddInParameter(cmd, "@Type", DbType.Int32, Convert.ToInt32(actionType));
+            db.AddInParameter(cmd, "@MenuID", DbType.Guid, model.MenuID);
+            db.AddInParameter(cmd, "@ParentID", DbType.String, model.ParentID);
+            db.AddInParameter(cmd, "@MenuName", DbType.String, model.MenuName);
+            db.AddInParameter(cmd, "@MenuImg", DbType.String, model.MenuImg);
+            db.AddInParameter(cmd, "@MenuType", DbType.Int32, model.MenuType);
+            db.AddInParameter(cmd, "@NavigateUrl", DbType.String, model.NavigateUrl);
+            db.AddInParameter(cmd, "@DeleteFlag", DbType.Int32, model.DeleteFlag);
+            db.AddInParameter(cmd, "@SortCode", DbType.Int32, model.SortCode);
+            int i = db.ExecuteNonQuery(cmd);
+            return i;
         }
     }
 }

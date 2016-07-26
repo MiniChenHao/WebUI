@@ -10,8 +10,8 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div class="ManZone">
-        <div class="ManTitle">控制面板</div>
+    <div class="MainZone">
+        <div class="MainTitle">控制面板</div>
         <table id="GrayTable" cellspacing="1" cellpadding="3">
             <thead>
                 <tr>

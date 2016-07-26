@@ -5,7 +5,7 @@
     padding: 0px;
     margin: 0px;
 }
-.ManZone
+.MainZone
 {
     width: 99%;
     background-color: #FFFFFF;
@@ -14,7 +14,7 @@
     margin-left: auto;
     margin-right: auto;
 }
-.ManZone .ManTitle
+.MainZone .MainTitle
 {
     width: 100%;
     height: 30px;
@@ -152,3 +152,4 @@
 
 .T_Input{ width: 229px; }
 .S_Input{ width: 235px; }
+.error{ color:red; }
