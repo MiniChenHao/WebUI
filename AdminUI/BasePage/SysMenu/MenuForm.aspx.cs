@@ -25,6 +25,7 @@ namespace AdminUI.BasePage.SysMenu
                 if (!string.IsNullOrEmpty(PID))
                 {
                     this.ParentTree.Value = PID;
+                    this.ParentID.Value = PID;
                 }
             }
         }

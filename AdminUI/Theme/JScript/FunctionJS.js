@@ -105,3 +105,12 @@ function GetQueryString(name) {
     var r = window.location.search.substr(1).match(reg);
     if (r != null) return unescape(r[2]); return null;
 }
+
+function MainResize() {
+    resizeU()
+    $(window).resize(resizeU);
+    function resizeU() {
+        var windowH = $(window).height();
+        $(".MainBody").height(windowH - 47);
+    }
+}

@@ -8,20 +8,22 @@
     <link href="/Theme/CSS/Style.css?V=1.0" rel="stylesheet" type="text/css" />
     <link href="/Theme/JScript/jquery-easyui-1.4.5/themes/default/easyui.css" rel="stylesheet"type="text/css" />
     <link href="/Theme/JScript/jquery-easyui-1.4.5/themes/icon.css" rel="stylesheet" type="text/css" />
+    <link href="/Theme/JScript/jQuery-Validation-Engine/css/validationEngine.jquery.css" rel="stylesheet" type="text/css" />
     <script src="/Theme/JScript/jquery-1.12.3.min.js" type="text/javascript"></script>
     <script src="/Theme/JScript/jquery-easyui-1.4.5/jquery.easyui.min.js" type="text/javascript"></script>
-    <script src="/Theme/JScript/jquery-validation-1.14.0/dist/jquery.validate.min.js" type="text/javascript"></script>
-    <script src="/Theme/JScript/jquery-validation-1.14.0/dist/localization/messages_zh.js" type="text/javascript"></script>
+    <script src="/Theme/JScript/jQuery-Validation-Engine/js/jquery.validationEngine.js" type="text/javascript"></script>
+    <script src="/Theme/JScript/jQuery-Validation-Engine/js/jquery.validationEngine-zh_CN.js" type="text/javascript"></script>
     <script src="/Theme/JScript/FunctionJS.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $("#form1").validate();
+            $("#form1").validationEngine();
+            MainResize();
             var MID = GetQueryString("MID");
+            $(".MainTitle").html(MID == null ? "导航菜单添加" : "导航菜单编辑");
             $("#ParentTree").combotree({
                 url: '/BasePage/SysMenu/GetMenuList.ashx?Type=MenuDropDownList&MID=' + (MID == null ? "" : MID),
                 onChange: function (newValue, oldValue) {
                     $("#ParentID").val(newValue);
-                    alert(newValue);
                 }
             })
         })
@@ -47,7 +49,7 @@
                     <tr>
                         <th align="right">菜单名称:</th>
                         <td align="left">
-                            <input type="text" runat="server" id="MenuName" class="T_Input" required />
+                            <input type="text" runat="server" id="MenuName" class="T_Input validate[required]"  />
                         </td>
                     </tr>
                     <tr>
@@ -60,7 +62,7 @@
                     <tr>
                         <th align="right">菜单类型:</th>
                         <td align="left">
-                            <select id="MenuType" runat="server" class="S_Input" required ></select>
+                            <select id="MenuType" runat="server" class="S_Input validate[required]"  ></select>
                         </td>
                     </tr>
                     <tr>
@@ -74,7 +76,7 @@
                     <tr>
                         <th align="right">排序:</th>
                         <td align="left">
-                            <input type="text" runat="server" id="SortCode" class="T_Input" required />
+                            <input type="text" runat="server" id="SortCode" class="T_Input validate[required]" />
                         </td>
                     </tr>
                     <tr>
@@ -85,9 +87,9 @@
                     </tr>
                 </tbody>
             </table>
-        </div>
-        <div class="MainFoot" style=" text-align: center; ">
-            <button ID="Save" runat="server">保 存</button>
+            <div class="MainFoot" style=" text-align: center; ">
+                <button ID="Save" runat="server">保 存</button>
+            </div>
         </div>
     </div>
     </form>

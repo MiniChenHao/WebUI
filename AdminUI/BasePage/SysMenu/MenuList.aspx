@@ -31,25 +31,16 @@
             });
         })
 
-        function MainResize() {
-            resizeU()
-            $(window).resize(resizeU);
-            function resizeU() {
-                var windowH = $(window).height();
-                $(".MainBody").height(windowH - 47);
-            }
-        }
-
         function ADD() {
             var SelectNode = $('#TreeTable').treegrid('getSelected');
             var url = "/BasePage/SysMenu/MenuForm.aspx?PID=" + (SelectNode == null ? "" : escape(SelectNode.MenuID));
-            top.openDialog(url, "MenuForm", '导航菜单信息 - 添加', 450, 325, 50, 50);
+            top.frames["Center"].contentWindow.TabsAdd('导航菜单信息 - 添加', url, null);
         }
 
         function EDIT() {
             var SelectNode = $('#TreeTable').treegrid('getSelected');
             var url = "/BasePage/SysMenu/MenuForm.aspx?MID=" + (SelectNode == null ? "" : escape(SelectNode.MenuID));
-            top.openDialog(url, "MenuForm", '导航菜单信息 - 编辑', 450, 325, 50, 50);
+            top.frames["Center"].contentWindow.TabsAdd('导航菜单信息 - 编辑', url, null);
         }
 
         function DELETE() {
