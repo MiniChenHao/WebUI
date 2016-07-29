@@ -16,7 +16,7 @@
         $(function () {
             divresize();
             $(".divicons").click(function () {
-                window.parent.Get_Menu_Img($(this).attr('title'));
+                top.MenuForm.Get_Menu_Img($(this).attr('title'));
             }).dblclick(function () {
                 OpenClose();
             });

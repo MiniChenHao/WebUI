@@ -19,7 +19,6 @@
             $("#form1").validationEngine();
             MainResize();
             var MID = GetQueryString("MID");
-            $(".MainTitle").html(MID == null ? "导航菜单添加" : "导航菜单编辑");
             $("#ParentTree").combotree({
                 url: '/BasePage/SysMenu/GetMenuList.ashx?Type=MenuDropDownList&MID=' + (MID == null ? "" : MID),
                 onChange: function (newValue, oldValue) {
@@ -49,20 +48,20 @@
                     <tr>
                         <th align="right">菜单名称:</th>
                         <td align="left">
-                            <input type="text" runat="server" id="MenuName" class="T_Input validate[required]"  />
+                            <input type="text" runat="server" id="MenuName" class="T_Input validate[required]" />
                         </td>
                     </tr>
                     <tr>
                         <th align="right">菜单父级:</th>
                         <td align="left">
                             <input id="ParentID" type="hidden" runat="server" />
-                            <input id="ParentTree" runat="server" style=" width: 233px;" />
+                            <input id="ParentTree" runat="server" value="0" style=" width: 233px;" />
                         </td>
                     </tr>
                     <tr>
                         <th align="right">菜单类型:</th>
                         <td align="left">
-                            <select id="MenuType" runat="server" class="S_Input validate[required]"  ></select>
+                            <select id="MenuType" runat="server" class="S_Input validate[required]"></select>
                         </td>
                     </tr>
                     <tr>

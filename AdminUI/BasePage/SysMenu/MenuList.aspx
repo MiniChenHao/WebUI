@@ -34,13 +34,13 @@
         function ADD() {
             var SelectNode = $('#TreeTable').treegrid('getSelected');
             var url = "/BasePage/SysMenu/MenuForm.aspx?PID=" + (SelectNode == null ? "" : escape(SelectNode.MenuID));
-            top.frames["Center"].contentWindow.TabsAdd('导航菜单信息 - 添加', url, null);
+            top.openDialog(url, "MenuForm", '导航菜单信息 - 添加', 600, 400, 50, 50);
         }
 
         function EDIT() {
             var SelectNode = $('#TreeTable').treegrid('getSelected');
             var url = "/BasePage/SysMenu/MenuForm.aspx?MID=" + (SelectNode == null ? "" : escape(SelectNode.MenuID));
-            top.frames["Center"].contentWindow.TabsAdd('导航菜单信息 - 编辑', url, null);
+            top.openDialog(url, "MenuForm", '导航菜单信息 - 编辑', 600, 400, 50, 50);
         }
 
         function DELETE() {
