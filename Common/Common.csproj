@@ -83,6 +83,11 @@
     <Compile Include="NetUI\IPScanerHelper.cs" />
     <Compile Include="NetUI\ShowMsgHelper.cs" />
     <Compile Include="NetUI\WebHelper.cs" />
+    <Compile Include="NetValidate\ArgumentValidationAttribute.cs" />
+    <Compile Include="NetValidate\IInterceptor.cs" />
+    <Compile Include="NetValidate\InRangeAttribute.cs" />
+    <Compile Include="NetValidate\NotNullAttribute.cs" />
+    <Compile Include="NetValidate\ValidationInterceptor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidateHelper.cs" />
   </ItemGroup>

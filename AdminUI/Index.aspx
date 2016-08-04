@@ -8,12 +8,14 @@
     <link href="/Theme/JScript/JQuertUI/layout-latest.css" rel="stylesheet" type="text/css" />
     <link href="/Theme/JScript/artDialog/skins/blue.css" rel="stylesheet" type="text/css" />
     <link href="/Theme/CSS/MainFrame.css" rel="stylesheet" type="text/css" />
+    <link href="/Theme/JScript/ShowMsg/msgbox.css" rel="stylesheet" type="text/css" />
     <script src="/Theme/JScript/jquery-1.12.3.min.js" type="text/javascript"></script>
     <script src="/Theme/JScript/JQuertUI/external/jquery/jquery.js" type="text/javascript"></script>
     <script src="/Theme/JScript/JQuertUI/jquery-ui.js" type="text/javascript"></script>
     <script src="/Theme/JScript/JQuertUI/jquery.layout-latest.js" type="text/javascript"></script>
     <script src="/Theme/JScript/artDialog/artDialog.source.js" type="text/javascript"></script>
     <script src="/Theme/JScript/artDialog/iframeTools.source.js" type="text/javascript"></script>
+    <script src="/Theme/JScript/ShowMsg/msgbox.js" type="text/javascript"></script>
     <script src="/Theme/JScript/FunctionJS.js" type="text/javascript"></script>
     <script src="/Theme/JScript/MainFrame.js" type="text/javascript"></script>
     <script type="text/javascript">

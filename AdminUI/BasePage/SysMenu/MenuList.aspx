@@ -45,7 +45,7 @@
 
         function DELETE() {
             top.showConfirmMsg("确认要删除吗？", function () {
-                alert("DELETE");
+                showTipsMsg("删除成功！", 2000, 4);
             })
         }
     </script>

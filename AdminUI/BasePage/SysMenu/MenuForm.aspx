@@ -36,6 +36,7 @@
             $("#Img_Menu_Img").attr("src", '/Theme/Image/32/' + img);
             $("#MenuImgUrl").val(img);
         }
+
     </script>
 </head>
 <body>
@@ -54,8 +55,8 @@
                     <tr>
                         <th align="right">菜单父级:</th>
                         <td align="left">
-                            <input id="ParentID" type="hidden" runat="server" />
-                            <input id="ParentTree" runat="server" value="0" style=" width: 233px;" />
+                            <input id="ParentID" type="hidden" runat="server" value="0" />
+                            <input id="ParentTree" runat="server" value="0" style=" width: 235px;" />
                         </td>
                     </tr>
                     <tr>
@@ -87,7 +88,7 @@
                 </tbody>
             </table>
             <div class="MainFoot" style=" text-align: center; ">
-                <button ID="Save" runat="server">保 存</button>
+                <asp:Button ID="Save" runat="server" Text="保 存" onclick="Save_Click" />
             </div>
         </div>
     </div>

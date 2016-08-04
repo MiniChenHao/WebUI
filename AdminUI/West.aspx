@@ -8,6 +8,7 @@
     <link href="/Theme/JScript/JQuertUI/jquery-ui.css" rel="stylesheet" type="text/css" />
     <script src="/Theme/JScript/JQuertUI/external/jquery/jquery.js" type="text/javascript"></script>
     <script src="/Theme/JScript/JQuertUI/jquery-ui.js" type="text/javascript"></script>
+    <script src="/Theme/JScript/FunctionJS.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $(this).height($(window).height());
@@ -36,11 +37,6 @@
                 $(Control).height(BodyH - 2);
                 $(Control).accordion( "refresh" );
             }
-        }
-
-        function NavMenuUrl(url, title) {
-            //window.parent.frames["Center"].contentWindow.TabsAdd(title, url, null);
-            top.frames["Center"].contentWindow.TabsAdd(title, url, null);
         }
     </script>
     <style type="text/css">

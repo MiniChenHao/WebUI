@@ -54,7 +54,7 @@ namespace AdminUI
             {
                 if (item.ParentID == ParentID)
                 {
-                    Result += "<li onclick=\"NavMenuUrl('" + item.NavigateUrl + "','" + item.MenuName + "')\"><img src=\"/Theme/Image/32/" + item.MenuImg + "\" width='22' height='22' />" + item.MenuName + "</li>";
+                    Result += "<li onclick=\"NavMenuUrl('" + item.NavigateUrl + "','" + item.MenuName + "')\"><img src=\"/Theme/Image/32/" + (item.MenuImg == "" ? "189.png" : item.MenuImg) + "\" width='22' height='22' />" + item.MenuName + "</li>";
                 }
             }
             Result += "</ul>";

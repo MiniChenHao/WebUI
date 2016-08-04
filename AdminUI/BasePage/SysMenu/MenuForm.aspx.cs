@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using Common.NetEnum;
 using SysModel;
 using SysBLL;
+using Common.NetUI;
 
 namespace AdminUI.BasePage.SysMenu
 {
@@ -53,6 +54,11 @@ namespace AdminUI.BasePage.SysMenu
                 this.SortCode.Value = MenuList.First().SortCode.ToString();
                 this.NavigateUrl.Value = MenuList.First().NavigateUrl;
             }
+        }
+
+        protected void Save_Click(object sender, EventArgs e)
+        {
+            ShowMsgHelper.ShowScript("showTipsMsg(\"删除成功！\", 2000, 4);");
         }
     }
 }

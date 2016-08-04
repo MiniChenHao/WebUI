@@ -13,6 +13,11 @@ function TabsAdd(title, url, icon) {
     }
 }
 
+function NavMenuUrl(url, title) {
+    //window.parent.frames["Center"].contentWindow.TabsAdd(title, url, null);
+    top.frames["Center"].contentWindow.TabsAdd(title, url, null);
+}
+
 /// <summary>
 /// 警告提示
 /// </summary>
@@ -65,6 +70,26 @@ function showConfirmMsg(msg, callBack) {
 }
 
 /// <summary>
+/// 温馨提醒
+/// </summary>
+/// <param name="msg">显示消息</param>
+/// <returns></returns>
+function showFaceMsg(msg) {
+    top.art.dialog({
+        id: 'faceId',
+        title: '温馨提醒',
+        content: msg,
+        icon: 'face-smile',
+        time: 10,
+        background: '#000',
+        opacity: 0.1,
+        lock: true,
+        okVal: '关闭',
+        ok: true
+    });
+}
+
+/// <summary>
 /// 弹出网页
 /// </summary>
 /// <param name="url">显示消息</param>
@@ -92,6 +117,17 @@ function openDialog(url, _id, _title, _width, _height, left, top) {
 }
 
 /// <summary>
+/// 短暂提示
+/// </summary>
+/// <param name="msg">显示消息</param>
+/// <param name="type">停留时间(ms)</param>
+/// <param name="type">类型 4：成功，5：失败，3：警告</param>
+/// <returns></returns>
+function showTipsMsg(msg, time, type) {
+    top.ZENG.msgbox.show(msg, type, time, 140);
+}
+
+/// <summary>
 /// 窗口关闭
 /// </summary>
 function OpenClose() {
@@ -113,4 +149,18 @@ function MainResize() {
         var windowH = $(window).height();
         $(".MainBody").height(windowH - 47);
     }
+}
+
+function getAjax(url, parm, callBack) {
+    $.ajax({
+        type: 'post',
+        dataType: "text",
+        url: url,
+        data: parm,
+        cache: false,
+        async: false,
+        success: function (msg) {
+            callBack(msg);
+        }
+    });
 }
