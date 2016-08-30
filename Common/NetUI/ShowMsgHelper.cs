@@ -16,7 +16,7 @@ namespace Common.NetUI
 
         public static void AlertMsg(string message)
         {
-            ShowMsgHelper.ExecuteScript(string.Format("showTipsMsg('{0}','2500','4');top.main.windowload();OpenClose();", message));
+            ShowMsgHelper.ExecuteScript(string.Format("showTipsMsg('{0}','2500','4');RefreshCenter();OpenClose();", message));
         }
 
         public static void ParmAlertMsg(string message)

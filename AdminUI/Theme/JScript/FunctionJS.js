@@ -17,6 +17,18 @@ function NavMenuUrl(url, title) {
     //window.parent.frames["Center"].contentWindow.TabsAdd(title, url, null);
     top.frames["Center"].contentWindow.TabsAdd(title, url, null);
 }
+//中间页刷新
+function RefreshCenter() {
+    top.window.frames["Center"].contentWindow.Refresh();
+}
+
+function CloseTab() {
+    var tab = top.frames["Center"].contentWindow.$('#tabs').tabs('getSelected');
+    if (tab) {
+        var index = top.frames["Center"].contentWindow.$('#tabs').tabs('getTabIndex', tab);
+        top.frames["Center"].contentWindow.$('#tabs').tabs('close', index);
+    } 
+}
 
 /// <summary>
 /// 警告提示
@@ -142,12 +154,12 @@ function GetQueryString(name) {
     if (r != null) return unescape(r[2]); return null;
 }
 
-function MainResize() {
+function MainResize(Height) {
     resizeU()
     $(window).resize(resizeU);
     function resizeU() {
         var windowH = $(window).height();
-        $(".MainBody").height(windowH - 47);
+        $(".MainBody").height(windowH - Height);
     }
 }
 
@@ -163,4 +175,13 @@ function getAjax(url, parm, callBack) {
             callBack(msg);
         }
     });
+}
+
+
+/// <summary>
+/// 切换验证码
+/// </summary>
+function ToggleCode(obj, codeurl) {
+    $("#txtCode").val("");
+    $("#" + obj).attr("src", codeurl + "?time=" + Math.random());
 }

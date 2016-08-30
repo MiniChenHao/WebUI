@@ -12,32 +12,32 @@
     <form id="form1" runat="server">
     <div class="MainZone">
         <div class="MainTitle">控制面板</div>
-        <table id="GrayTable" cellspacing="1" cellpadding="3">
-            <thead>
-                <tr>
-                    <td class="GrayTd">asdfasdf</td>
-                    <td class="GrayTd">asdfasdf</td>
-                    <td class="GrayTd">asdfasdf</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="trHover">
-                    <td>asdfasdf</td>
-                    <td>adsfadsf</td>
-                    <td>asdfasdf</td>
-                </tr>
-                <tr class="trHover">
-                    <td>asdfasdf</td>
-                    <td>asdfasdf</td>
-                    <td>asdfasdf</td>
-                </tr>
-                <tr class="trHover">
-                    <td>asdfasdf</td>
-                    <td>asdfasdf</td>
-                    <td>asdfasdf</td>
-                </tr>
-            </tbody>
-        </table>
+        <table id="GridTable" cellspacing="0" cellpadding="3">
+                <thead>
+                    <tr class="Table-Header-Tr">
+                        <td class="FirstTd">序号</td>
+                        <td class="OtherTd" style=" width: 20px;"><input type="checkbox" /></td>
+                        <td class="OtherTd">按钮名称</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="Table-Body-Tr">
+                        <td class="FirstTd">1</td>
+                        <td class="OtherTd"><input type="checkbox" /></td>
+                        <td class="OtherTd">asdfasdf</td>
+                    </tr>
+                    <tr class="Table-Body-Tr">
+                        <td class="FirstTd">2</td>
+                        <td class="OtherTd"><input type="checkbox" /></td>
+                        <td class="OtherTd">asdfasdf</td>
+                    </tr>
+                    <tr class="Table-Body-Tr">
+                        <td class="FirstTd">3</td>
+                        <td class="OtherTd"><input type="checkbox" /></td>
+                        <td class="OtherTd">asdfasdf</td>
+                    </tr>
+                </tbody>
+            </table>
 
         <a title="新增" onclick="ADD()" class="button Btn-Green">
             <span class="btn-icon icon-add"></span>新增

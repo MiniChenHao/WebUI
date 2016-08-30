@@ -16,7 +16,12 @@
         $(function () {
             divresize();
             $(".divicons").click(function () {
-                top.MenuForm.Get_Menu_Img($(this).attr('title'));
+                if ($("#hidden_Size").val() == "32") {
+                    top.MenuForm.Get_Img($(this).attr('title'));
+                }
+                else {
+                    top.ButtonForm.Get_Img($(this).attr('title'));
+                }
             }).dblclick(function () {
                 OpenClose();
             });

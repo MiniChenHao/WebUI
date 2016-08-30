@@ -168,6 +168,12 @@
 				"qq":{
 					"regex":/^[1-9]\d{4,10}$/,
 					"alertText":"* 无效的 QQ 号码"
+	            },
+
+
+	            "PositiveInteger": {
+	                "regex": /^[0-9]*[1-9][0-9]*$/,
+					"alertText":"* 请输入大于0的整数"
 				}
 				
 				/**

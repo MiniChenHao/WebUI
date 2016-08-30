@@ -18,8 +18,7 @@ namespace SysModel
             {
                 foreach (var item in validateResults)
                 {
-                    ValidateTag.Append(string.Format(@"{0}:{1}" + Environment.NewLine, item.Key, item.Message));
-                    ValidateTag.Append("\r\n");
+                    ValidateTag.Append(string.Format(@"{0}:{1}<br />", item.Key, item.Message));
                 }
                 return false;
             }

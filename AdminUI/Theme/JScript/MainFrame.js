@@ -54,11 +54,6 @@ function BeautifulGreetings() {
     else { return ("夜深了,早点休息吧！") }
 }
 
-//中间页刷新
-function RefreshCenter() {
-    window.frames["Center"].contentWindow.Refresh();
-}
-
 
 //安全登出
 function LogOut() {

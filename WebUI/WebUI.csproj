@@ -53,6 +53,7 @@
   <ItemGroup>
     <Content Include="Calendar\Index.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="E-Notes\C-Sharp\TypeConversion.html" />
     <Content Include="E-Notes\Index.html" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
@@ -440,7 +441,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>3521</DevelopmentServerPort>
+          <DevelopmentServerPort>44919</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

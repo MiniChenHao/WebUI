@@ -1,6 +1,6 @@
-﻿body { font-family: 宋体,Geneva, Arial, Helvetica, sans-serif; font-size: 14px; padding: 0px; margin: 0px; min-width: 720px; }
+﻿body { font-family: caecilia, times, serif; font-size: 14px; padding: 0px; margin: 0px; min-width: 720px; }
 .MainBody { width: 720px; background-color: #FFFFFF; padding: 0px; overflow: auto; margin-left: auto; margin-right: auto; }
-.MainBody .MainTitle { width: 100%; height: 30px; line-height: 30px; font-weight: bold; font-size: 14px; border-bottom: 1px dotted #D6E9F7; margin-bottom: 10px; color: #009AD9; }
+.MainBody .MainTitle { width: 100%; height: 50px; line-height: 50px; font-size: 28px; border-bottom: 1px dotted #2dbe60; margin-bottom: 10px; color: #2dbe60; }
 .list { float: left; padding: 5px; }
 ul, h1, h2, h3, h4, h5, h6 { margin: 0px; padding: 0px; }
 .list ul { list-style-type: none; width: 230px; }

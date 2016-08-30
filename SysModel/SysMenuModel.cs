@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.Practices.EnterpriseLibrary.Validation;
+using Microsoft.Practices.EnterpriseLibrary.Validation.Validators;
 
 namespace SysModel
 {
+    [Serializable]
     public class SysMenuModel : BaseModel<SysMenuModel>
     {
         /// <summary>
@@ -20,6 +23,7 @@ namespace SysModel
         /// <summary>
         /// 菜单名称
         /// </summary>
+        [NotNullValidator(MessageTemplate = "不能为空!")]
         public string MenuName { get; set; }
 
         /// <summary>
@@ -30,6 +34,7 @@ namespace SysModel
         /// <summary>
         /// 菜单类型
         /// </summary>
+        [RangeValidator(0, RangeBoundaryType.Exclusive, 100, RangeBoundaryType.Inclusive, MessageTemplate = "请选择菜单类型!")]
         public int MenuType { get; set; }
 
         /// <summary>
@@ -40,6 +45,7 @@ namespace SysModel
         /// <summary>
         /// 排序
         /// </summary>
+        [RangeValidator(0, RangeBoundaryType.Exclusive, 100, RangeBoundaryType.Inclusive, MessageTemplate = "排序请填写正整数!")]
         public int SortCode { get; set; }
 
         /// <summary>

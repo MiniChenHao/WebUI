@@ -14,7 +14,7 @@
     <script src="/Theme/JScript/FunctionJS.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            MainResize();
+            MainResize(47);
             $("#TreeTable").treegrid({
                 url: '/BasePage/SysMenu/GetMenuList.ashx?Type=MenuList',
                 idField: 'MenuID',
@@ -26,6 +26,7 @@
                 columns: [[
 		            { field: 'MenuImg', title: '图标', align: 'center' },
 		            { field: 'SortCode', title: '排序', align: 'center' },
+                    { field: 'MenuType', title: '类型', align: 'center' },
 		            { field: 'NavigateUrl', title: '链接地址' }
                 ]]
             });
@@ -39,8 +40,13 @@
 
         function EDIT() {
             var SelectNode = $('#TreeTable').treegrid('getSelected');
-            var url = "/BasePage/SysMenu/MenuForm.aspx?MID=" + (SelectNode == null ? "" : escape(SelectNode.MenuID));
-            top.openDialog(url, "MenuForm", '导航菜单信息 - 编辑', 600, 400, 50, 50);
+            if (SelectNode == undefined || SelectNode == null) {
+                showWarningMsg("未选中任何一行");
+            }
+            else {
+                var url = "/BasePage/SysMenu/MenuForm.aspx?MID=" + escape(SelectNode.MenuID);
+                top.openDialog(url, "MenuForm", '导航菜单信息 - 编辑', 600, 400, 50, 50);
+            }
         }
 
         function DELETE() {
@@ -48,13 +54,22 @@
                 showTipsMsg("删除成功！", 2000, 4);
             })
         }
+
+        function ALLOTBUTTON() {
+            var SelectNode = $('#TreeTable').treegrid('getSelected');
+            if (SelectNode == undefined || SelectNode == null) {
+                showWarningMsg("未选中任何一行");
+            }
+            else {
+                NavMenuUrl("/BasePage/SysMenu/AllotButtonForm.aspx?MID=" + escape(SelectNode.MenuID), "导航菜单信息 - 分配按钮");
+            }
+        }
     </script>
 </head>
 <body>
     <form id="form1" runat="server">
     <div class="MainZone">
-        <div class="MainTitle">
-            菜单导航
+        <div class="MainTitle">菜单导航
             <div style=" float:right; padding-right:2px; ">
                 <a title="新增" onclick="ADD()" class="button Btn-Green">
                     <span class="btn-icon" style=" background: url('/Theme/Image/16/add.png') no-repeat center center; "></span>新增
@@ -64,6 +79,9 @@
                 </a>
                 <a title="删除" onclick="DELETE()" class="button Btn-Green">
                     <span class="btn-icon" style=" background: url('/Theme/Image/16/delete.png') no-repeat center center; "></span>删除
+                </a>
+                <a title="按钮分配" onclick="ALLOTBUTTON()" class="button Btn-Green">
+                    <span class="btn-icon" style=" background: url('/Theme/Image/16/bricks.png') no-repeat center center; "></span>按钮分配
                 </a>
             </div>
         </div>

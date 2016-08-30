@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Common.NetValidate
 {
-    [AttributeUsage(AttributeTargets.Parameter)]
+    [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = false)]
     public class InRangeAttribute : ArgumentValidationAttribute
     {
         private int min;

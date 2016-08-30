@@ -12,12 +12,14 @@
     <script src="/Theme/JScript/jquery-1.12.3.min.js" type="text/javascript"></script>
     <script src="/Theme/JScript/jquery-easyui-1.4.5/jquery.easyui.min.js" type="text/javascript"></script>
     <script src="/Theme/JScript/jQuery-Validation-Engine/js/jquery.validationEngine.js" type="text/javascript"></script>
-    <script src="/Theme/JScript/jQuery-Validation-Engine/js/jquery.validationEngine-zh_CN.js" type="text/javascript"></script>
+    <script src="/Theme/JScript/jQuery-Validation-Engine/js/jquery.validationEngine-zh_CN.js?V=1.0" type="text/javascript"></script>
+    <script src="/Theme/JScript/artDialog/artDialog.source.js" type="text/javascript"></script>
+    <script src="/Theme/JScript/artDialog/iframeTools.source.js" type="text/javascript"></script>
     <script src="/Theme/JScript/FunctionJS.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $("#form1").validationEngine();
-            MainResize();
+            MainResize(100);
             var MID = GetQueryString("MID");
             $("#ParentTree").combotree({
                 url: '/BasePage/SysMenu/GetMenuList.ashx?Type=MenuDropDownList&MID=' + (MID == null ? "" : MID),
@@ -32,9 +34,9 @@
             top.openDialog(url, 'Icons_List', '系统图标 - 全取', 615, 400, 100, 100);
         }
         //全取图标
-        function Get_Menu_Img(img) {
+        function Get_Img(img) {
             $("#Img_Menu_Img").attr("src", '/Theme/Image/32/' + img);
-            $("#MenuImgUrl").val(img);
+            $("#MenuImg").val(img);
         }
 
     </script>
@@ -56,7 +58,7 @@
                         <th align="right">菜单父级:</th>
                         <td align="left">
                             <input id="ParentID" type="hidden" runat="server" value="0" />
-                            <input id="ParentTree" runat="server" value="0" style=" width: 235px;" />
+                            <input id="ParentTree" type="text" runat="server" value="0" style=" width: 235px;" />
                         </td>
                     </tr>
                     <tr>
@@ -76,7 +78,7 @@
                     <tr>
                         <th align="right">排序:</th>
                         <td align="left">
-                            <input type="text" runat="server" id="SortCode" class="T_Input validate[required]" />
+                            <input type="text" runat="server" id="SortCode" class="T_Input validate[required, custom[PositiveInteger]]" />
                         </td>
                     </tr>
                     <tr>
@@ -87,9 +89,10 @@
                     </tr>
                 </tbody>
             </table>
-            <div class="MainFoot" style=" text-align: center; ">
-                <asp:Button ID="Save" runat="server" Text="保 存" onclick="Save_Click" />
-            </div>
+        </div>
+        <div class="MainFoot" style=" text-align: center; ">
+            <asp:Button ID="Save" class="button Btn-Green" runat="server" Text="保 存" onclick="Save_Click" />
+            <button class="button Btn-Green" onclick="OpenClose();">关 闭</button>
         </div>
     </div>
     </form>

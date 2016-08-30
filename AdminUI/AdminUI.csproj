@@ -51,6 +51,10 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\ShenWebObject.sql" />
+    <Content Include="BasePage\SysButton\ButtonForm.aspx" />
+    <Content Include="BasePage\SysButton\ButtonList.aspx" />
+    <Content Include="BasePage\SysMenu\AllotButtonForm.aspx" />
     <Content Include="BasePage\SysMenu\Icons_List.aspx" />
     <Content Include="BasePage\SysMenu\MenuForm.aspx" />
     <Content Include="BasePage\SysMenu\MenuList.aspx" />
@@ -59,10 +63,12 @@
     <Content Include="Default.aspx" />
     <Content Include="East.aspx" />
     <Content Include="Index.aspx" />
+    <Content Include="Login.html" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
     <Content Include="Theme\CSS\Index.css" />
+    <Content Include="Theme\CSS\login.css" />
     <Content Include="Theme\CSS\MainFrame.css" />
     <Content Include="Theme\CSS\pagination.css" />
     <Content Include="Theme\CSS\Style.css" />
@@ -2621,6 +2627,12 @@
     <Content Include="Theme\Image\first.gif" />
     <Content Include="Theme\Image\illustration.png" />
     <Content Include="Theme\Image\last.gif" />
+    <Content Include="Theme\Image\loading.gif" />
+    <Content Include="Theme\Image\Login\137.png" />
+    <Content Include="Theme\Image\Login\bg.jpg" />
+    <Content Include="Theme\Image\Login\bg2.png" />
+    <Content Include="Theme\Image\Login\loading.gif" />
+    <Content Include="Theme\Image\Login\login-v2-load.png" />
     <Content Include="Theme\Image\next.gif" />
     <Content Include="Theme\Image\prev.gif" />
     <Content Include="Theme\Image\refresh.png" />
@@ -3419,6 +3431,33 @@
     <Content Include="West.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AJAX\VerifyCode.ashx.cs">
+      <DependentUpon>VerifyCode.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="BasePage\SysButton\ButtonForm.aspx.cs">
+      <DependentUpon>ButtonForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasePage\SysButton\ButtonForm.aspx.designer.cs">
+      <DependentUpon>ButtonForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasePage\SysButton\ButtonList.aspx.cs">
+      <DependentUpon>ButtonList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasePage\SysButton\ButtonList.aspx.designer.cs">
+      <DependentUpon>ButtonList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasePage\SysButton\GetButtonList.ashx.cs">
+      <DependentUpon>GetButtonList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="BasePage\SysMenu\AllotButtonForm.aspx.cs">
+      <DependentUpon>AllotButtonForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasePage\SysMenu\AllotButtonForm.aspx.designer.cs">
+      <DependentUpon>AllotButtonForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BasePage\SysMenu\GetMenuList.ashx.cs">
       <DependentUpon>GetMenuList.ashx</DependentUpon>
     </Compile>
@@ -3494,11 +3533,11 @@
       <DependentUpon>West.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="BasePage\SysMenu\GetMenuList.ashx" />
+    <Content Include="BasePage\SysButton\GetButtonList.ashx" />
+    <Content Include="AJAX\VerifyCode.ashx" />
     <None Include="Theme\JScript\jquery-easyui-1.4.5\demo\accordion\datagrid_data1.json" />
     <None Include="Theme\JScript\jquery-easyui-1.4.5\demo\combobox\combobox_data1.json" />
     <None Include="Theme\JScript\jquery-easyui-1.4.5\demo\combobox\combobox_data2.json" />
@@ -3547,7 +3586,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>16407</DevelopmentServerPort>
+          <DevelopmentServerPort>44914</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

@@ -63,6 +63,7 @@
     <Compile Include="NetData\DataTableHelper.cs" />
     <Compile Include="NetData\HashtableHelper.cs" />
     <Compile Include="NetData\ReaderToIListHelper.cs" />
+    <Compile Include="NetData\TypeConversion.cs" />
     <Compile Include="NetData\ValidationHelper.cs" />
     <Compile Include="NetData\XMLHelper.cs" />
     <Compile Include="NetEmail\SMTPManager.cs" />
@@ -84,10 +85,8 @@
     <Compile Include="NetUI\ShowMsgHelper.cs" />
     <Compile Include="NetUI\WebHelper.cs" />
     <Compile Include="NetValidate\ArgumentValidationAttribute.cs" />
-    <Compile Include="NetValidate\IInterceptor.cs" />
     <Compile Include="NetValidate\InRangeAttribute.cs" />
     <Compile Include="NetValidate\NotNullAttribute.cs" />
-    <Compile Include="NetValidate\ValidationInterceptor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidateHelper.cs" />
   </ItemGroup>
