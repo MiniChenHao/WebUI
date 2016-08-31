@@ -36,6 +36,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -70,6 +71,7 @@
     <Compile Include="NetEncrypt\DESEncrypt.cs" />
     <Compile Include="NetEncrypt\Md5Helper.cs" />
     <Compile Include="NetEnum\EnumHelper.cs" />
+    <Compile Include="NetEnum\MSGCode.cs" />
     <Compile Include="NetEnum\SysEnum.cs" />
     <Compile Include="NetFile\DirFileHelper.cs" />
     <Compile Include="NetFile\FileDownHelper.cs" />
@@ -79,6 +81,7 @@
     <Compile Include="NetFile\UploadHelper.cs" />
     <Compile Include="NetImage\ImageHelper.cs" />
     <Compile Include="NetJson\JsonHelper.cs" />
+    <Compile Include="NetUI\ControlAction.cs" />
     <Compile Include="NetUI\ControlBindHelper.cs" />
     <Compile Include="NetUI\ExcelHelper.cs" />
     <Compile Include="NetUI\IPScanerHelper.cs" />

@@ -7,10 +7,11 @@ using System.Web.UI.WebControls;
 using SysBLL;
 using SysModel;
 using Common.NetJson;
+using Common.NetBean;
 
 namespace AdminUI
 {
-    public partial class Index : System.Web.UI.Page
+    public partial class Index : PageBase
     {
         SysMenuBLL SMBll = new SysMenuBLL();
         protected void Page_Load(object sender, EventArgs e)
@@ -18,6 +19,7 @@ namespace AdminUI
             if (!IsPostBack)
             {
                 DateLoad();
+                this.UserName.InnerText = RequestSession.GetSessionUser().UserName.ToString();
             }
         }
 

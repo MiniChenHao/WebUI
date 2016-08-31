@@ -58,6 +58,7 @@
     <Content Include="BasePage\SysMenu\Icons_List.aspx" />
     <Content Include="BasePage\SysMenu\MenuForm.aspx" />
     <Content Include="BasePage\SysMenu\MenuList.aspx" />
+    <Content Include="BasePage\SysUser\UserList.aspx" />
     <Content Include="Center.aspx" />
     <Content Include="Dashboard.aspx" />
     <Content Include="Default.aspx" />
@@ -3431,6 +3432,9 @@
     <Content Include="West.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AJAX\Login.ashx.cs">
+      <DependentUpon>Login.ashx</DependentUpon>
+    </Compile>
     <Compile Include="AJAX\VerifyCode.ashx.cs">
       <DependentUpon>VerifyCode.ashx</DependentUpon>
     </Compile>
@@ -3482,6 +3486,16 @@
     <Compile Include="BasePage\SysMenu\MenuList.aspx.designer.cs">
       <DependentUpon>MenuList.aspx</DependentUpon>
     </Compile>
+    <Compile Include="BasePage\SysUser\GetUserList.ashx.cs">
+      <DependentUpon>GetUserList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="BasePage\SysUser\UserList.aspx.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasePage\SysUser\UserList.aspx.designer.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Center.aspx.cs">
       <DependentUpon>Center.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3517,6 +3531,9 @@
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App_Code\PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserControl\PageControl.ascx.cs">
       <DependentUpon>PageControl.ascx</DependentUpon>
@@ -3538,6 +3555,8 @@
     <Content Include="BasePage\SysMenu\GetMenuList.ashx" />
     <Content Include="BasePage\SysButton\GetButtonList.ashx" />
     <Content Include="AJAX\VerifyCode.ashx" />
+    <Content Include="AJAX\Login.ashx" />
+    <Content Include="BasePage\SysUser\GetUserList.ashx" />
     <None Include="Theme\JScript\jquery-easyui-1.4.5\demo\accordion\datagrid_data1.json" />
     <None Include="Theme\JScript\jquery-easyui-1.4.5\demo\combobox\combobox_data1.json" />
     <None Include="Theme\JScript\jquery-easyui-1.4.5\demo\combobox\combobox_data2.json" />

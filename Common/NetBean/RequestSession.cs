@@ -21,5 +21,11 @@ namespace Common.NetBean
             HttpContext rq = HttpContext.Current;
             return (SessionUser)rq.Session[RequestSession.SESSION_USER];
         }
+
+        public static void CloseSessionUser()
+        {
+            HttpContext rq = HttpContext.Current;
+            rq.Session.Abandon();
+        }
     }
 }

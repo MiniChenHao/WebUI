@@ -59,7 +59,10 @@ function BeautifulGreetings() {
 function LogOut() {
     top.showConfirmMsg('确定要安全退出吗？', function (r) {
         if (r) {
-            window.location.href = '/Index.aspx';
+            var parm = 'Action=LogOut';
+            getAjax('/AJAX/Login.ashx', parm, function (rs) {
+                window.location.href = '/Index.aspx';
+            });
         }
     });
 }

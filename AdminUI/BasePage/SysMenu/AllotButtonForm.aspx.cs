@@ -7,10 +7,11 @@ using System.Web.UI.WebControls;
 using SysBLL;
 using SysModel;
 using Common.NetEnum;
+using Common.NetUI;
 
 namespace AdminUI.BasePage.SysMenu
 {
-    public partial class AllotButtonForm : System.Web.UI.Page
+    public partial class AllotButtonForm : PageBase
     {
         SysMenuBLL SMBll = new SysMenuBLL();
         SysButtonBLL SBBLL = new SysButtonBLL();
@@ -47,7 +48,7 @@ namespace AdminUI.BasePage.SysMenu
 
         protected void Save_Click(object sender, EventArgs e)
         {
-
+            ControlAction.CloseTab(this.Page, "保存成功");
         }
     }
 }

@@ -13,7 +13,7 @@ using Common.NetData;
 
 namespace AdminUI.BasePage.SysMenu
 {
-    public partial class MenuForm : System.Web.UI.Page
+    public partial class MenuForm : PageBase
     {
         SysMenuBLL SMBll = new SysMenuBLL();
         string MID;
@@ -84,11 +84,11 @@ namespace AdminUI.BasePage.SysMenu
                     int i = SMBll.MenuAction(model, Common.NetEnum.SysEnum.ActionType.ADD);
                     if (i > 0)
                     {
-                        ShowMsgHelper.AlertMsg("添加成功！");
+                        ControlAction.CloseWindow(this.Page, "添加成功！", 2500, SysEnum.MsgType.SUCCESS);
                     }
                     else
                     {
-                        ShowMsgHelper.AlertMsg("添加失败！");
+                        ControlAction.CloseWindow(this.Page, "添加失败！", 2500, SysEnum.MsgType.ERROR);
                     }
                 }
                 else
@@ -97,11 +97,11 @@ namespace AdminUI.BasePage.SysMenu
                     int i = SMBll.MenuAction(model, Common.NetEnum.SysEnum.ActionType.UPDATE);
                     if (i > 0)
                     {
-                        ShowMsgHelper.AlertMsg("修改成功！");
+                        ControlAction.CloseWindow(this.Page, "修改成功！", 2500, SysEnum.MsgType.SUCCESS);
                     }
                     else
                     {
-                        ShowMsgHelper.AlertMsg("修改失败！");
+                        ControlAction.CloseWindow(this.Page, "修改失败！", 2500, SysEnum.MsgType.ERROR);
                     }
                 }
             }

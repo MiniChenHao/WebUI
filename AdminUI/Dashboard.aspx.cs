@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace AdminUI
 {
-    public partial class Dashboard : System.Web.UI.Page
+    public partial class Dashboard : PageBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

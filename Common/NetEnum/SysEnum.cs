@@ -64,5 +64,24 @@ namespace Common.NetEnum
             [Description("查询")]
             QUERY = 4
         }
+
+        public enum MsgType
+        {
+            /// <summary>
+            /// 警告
+            /// </summary>
+            [Description("警告")]
+            WARNING = 3,
+            /// <summary>
+            /// 成功
+            /// </summary>
+            [Description("成功")]
+            SUCCESS = 4,
+            /// <summary>
+            /// 错误
+            /// </summary>
+            [Description("错误")]
+            ERROR = 5
+        }
     }
 }

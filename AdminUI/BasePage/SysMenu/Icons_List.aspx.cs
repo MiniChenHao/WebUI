@@ -9,7 +9,7 @@ using System.IO;
 
 namespace AdminUI.BasePage.SysMenu
 {
-    public partial class Icons_List : System.Web.UI.Page
+    public partial class Icons_List : PageBase
     {
         public StringBuilder strImg = new StringBuilder();
         private string _Size;

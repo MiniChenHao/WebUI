@@ -92,7 +92,7 @@
                 <div id="LoginUser">
                     <img src="/Theme/Image/sun_2.png" alt="" width="20" height="20" />
                     <label id="Greetings"></label>
-                    <label id="UserName" runat="server">谌昊</label>欢迎登录系统！
+                    <label id="UserName" runat="server" style=" color:Red; font-weight:bold; ">****</label>欢迎登录系统！
                 </div>
                 <div id="Logout">
                     <img src="/Theme/Image/refresh.png" width="20" height="20" title="刷新" alt="刷新" onclick="RefreshCenter();" />

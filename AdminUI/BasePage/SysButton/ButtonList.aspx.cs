@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace AdminUI.BasePage.SysButton
 {
-    public partial class ButtonList : System.Web.UI.Page
+    public partial class ButtonList : PageBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

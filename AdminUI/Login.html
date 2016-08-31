@@ -24,18 +24,18 @@
             })
         })
         function LoginBtn() {
-            var name = $("#txtEmployeeAccount").val();
-            var pwd = $("#txtEmployeePwd").val();
+            var name = $("#txtUserName").val();
+            var pwd = $("#txtPassword").val();
             var code = $("#txtCode").val();
             $("#errorMsg0").html("");
             $("#errorMsg1").html("");
             $("#errorMsg2").html("");
             if (name == "") {
-                $("#txtEmployeeAccount").focus();
+                $("#txtUserName").focus();
                 $("#errorMsg0").html("账户不能为空");
                 return false;
             } else if (pwd == "") {
-                $("#txtEmployeePwd").focus();
+                $("#txtPassword").focus();
                 $("#errorMsg1").html("密码不能为空");
                 return false;
             } else if (code == "") {
@@ -55,20 +55,20 @@
             }
             else {
                 CheckingLogin(1);
-                var userName = $("#txtEmployeeAccount").val();
-                var userPwd = $("#txtEmployeePwd").val();
+                var userName = $("#txtUserName").val();
+                var userPwd = $("#txtPassword").val();
                 var code = $("#txtCode").val();
-                var parm = 'Action=Login&Account=' + escape(userName) + '&Pwd=' + escape(userPwd) + '&Code=' + escape(code);
-                getAjax('/Admin/Ajax/Login.ashx', parm, function (rs) {
+                var parm = 'Action=Login&P1=' + escape(userName) + '&P2=' + escape(userPwd) + '&P3=' + escape(code);
+                getAjax('/AJAX/Login.ashx', parm, function (rs) {
                     switch (parseInt(rs)) {
                         case 1:
                             $("#txtCode").focus();
                             $("#errorMsg2").html("验证码输入不正确");
                             CheckingLogin(0);
-                            ToggleCode("Verify_codeImag", '/Admin/Ajax/Verify_code.ashx');
+                            ToggleCode("Verify_codeImag", '/AJAX/VerifyCode.ashx');
                             break;
                         case 2:
-                            $("#txtEmployeeAccount").focus();
+                            $("#txtUserName").focus();
                             $("#errorMsg0").html("账户被锁,联系管理员");
                             CheckingLogin(0);
                             break;
@@ -76,14 +76,14 @@
                             setInterval(Load, 1000);
                             break;
                         case 4:
-                            $("#txtEmployeeAccount").focus();
+                            $("#txtUserName").focus();
                             $("#errorMsg0").html("账户或密码有错误");
                             CheckingLogin(0);
                             break;
                         case 5:
                             break;
                         case 6:
-                            $("#txtEmployeeAccount").focus();
+                            $("#txtUserName").focus();
                             $("#errorMsg0").html("该用户已经登录");
                             CheckingLogin(0);
                             break;
@@ -103,9 +103,9 @@
         }
         //清空
         function resetInput() {
-            $("#txtEmployeeAccount").focus(); //默认焦点
-            $("#txtEmployeeAccount").val("");
-            $("#txtEmployeePwd").val("");
+            $("#txtUserName").focus(); //默认焦点
+            $("#txtUserName").val("");
+            $("#txtPassword").val("");
         }
         function CheckingLogin(id) {
             if (id == 1) {
@@ -127,14 +127,14 @@
                 <dd>
                     <div class="s1">账&nbsp;&nbsp;&nbsp;户：</div>
                     <div class="s2">
-                        <input type="text" id="txtEmployeeAccount" value="system" class="txt" style="width: 122px;" />
+                        <input type="text" id="txtUserName" value="system" class="txt" style="width: 122px;" />
                         <span id="errorMsg0" class="errorMsg"></span>
                     </div>
                 </dd>
                 <dd>
                     <div class="s3">密&nbsp;&nbsp;&nbsp;码：</div>
                     <div class="s4">
-                        <input type="password" onpaste="return false;" id="txtEmployeePwd" value="system" class="txt" onpaste="return false;" style="width: 122px;" />&nbsp;
+                        <input type="password" onpaste="return false;" id="txtPassword" value="system" class="txt" onpaste="return false;" style="width: 122px;" />&nbsp;
                         <span id="errorMsg1" class="errorMsg"></span>
                     </div>
                 </dd>
