@@ -16,7 +16,7 @@
         $(document).ready(function () {
             MainResize(47);
             $("#GridTable").datagrid({
-                url: '/BasePage/SysButton/GetButtonList.ashx',
+                url: '/BasePage/SysUser/GetUserList.ashx',
                 rownumbers: true,
                 singleSelect: true,
                 frozenColumns: [[

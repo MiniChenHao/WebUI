@@ -63,6 +63,7 @@
     <Content Include="Dashboard.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="East.aspx" />
+    <Content Include="Error\AccessDenied.html" />
     <Content Include="Index.aspx" />
     <Content Include="Login.html" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
