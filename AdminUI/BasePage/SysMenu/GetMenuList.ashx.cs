@@ -5,13 +5,14 @@ using System.Web;
 using SysModel;
 using SysBLL;
 using Common.NetEnum;
+using System.Web.SessionState;
 
 namespace AdminUI.BasePage.SysMenu
 {
     /// <summary>
     /// GetMenuList 的摘要说明
     /// </summary>
-    public class GetMenuList : IHttpHandler
+    public class GetMenuList : IHttpHandler, IRequiresSessionState
     {
         SysMenuBLL SMBll = new SysMenuBLL();
         SysMenuModel model = new SysMenuModel();

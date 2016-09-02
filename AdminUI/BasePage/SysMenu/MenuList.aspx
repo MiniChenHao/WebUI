@@ -55,13 +55,13 @@
             })
         }
 
-        function ALLOTBUTTON() {
+        function ALLOWBUTTON() {
             var SelectNode = $('#TreeTable').treegrid('getSelected');
             if (SelectNode == undefined || SelectNode == null) {
                 showWarningMsg("未选中任何一行");
             }
             else {
-                NavMenuUrl("/BasePage/SysMenu/AllotButtonForm.aspx?MID=" + escape(SelectNode.MenuID), "导航菜单信息 - 分配按钮");
+                NavMenuUrl("/BasePage/SysMenu/AllowButtonForm.aspx?MID=" + escape(SelectNode.MenuID), "导航菜单信息 - 分配按钮");
             }
         }
     </script>
@@ -80,7 +80,7 @@
                 <a title="删除" onclick="DELETE()" class="button Btn-Green">
                     <span class="btn-icon" style=" background: url('/Theme/Image/16/delete.png') no-repeat center center; "></span>删除
                 </a>
-                <a title="按钮分配" onclick="ALLOTBUTTON()" class="button Btn-Green">
+                <a title="按钮分配" onclick="ALLOWBUTTON()" class="button Btn-Green">
                     <span class="btn-icon" style=" background: url('/Theme/Image/16/bricks.png') no-repeat center center; "></span>按钮分配
                 </a>
             </div>

@@ -11,7 +11,7 @@ using Common.NetUI;
 
 namespace AdminUI.BasePage.SysMenu
 {
-    public partial class AllotButtonForm : PageBase
+    public partial class AllowButtonForm : PageBase
     {
         SysMenuBLL SMBll = new SysMenuBLL();
         SysButtonBLL SBBLL = new SysButtonBLL();

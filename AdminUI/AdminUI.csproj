@@ -54,10 +54,12 @@
     <Content Include="App_Data\ShenWebObject.sql" />
     <Content Include="BasePage\SysButton\ButtonForm.aspx" />
     <Content Include="BasePage\SysButton\ButtonList.aspx" />
-    <Content Include="BasePage\SysMenu\AllotButtonForm.aspx" />
+    <Content Include="BasePage\SysMenu\AllowButtonForm.aspx" />
     <Content Include="BasePage\SysMenu\Icons_List.aspx" />
     <Content Include="BasePage\SysMenu\MenuForm.aspx" />
     <Content Include="BasePage\SysMenu\MenuList.aspx" />
+    <Content Include="BasePage\SysRole\AllowAuthorityForm.aspx" />
+    <Content Include="BasePage\SysRole\RoleList.aspx" />
     <Content Include="BasePage\SysUser\UserList.aspx" />
     <Content Include="Center.aspx" />
     <Content Include="Dashboard.aspx" />
@@ -3456,12 +3458,12 @@
     <Compile Include="BasePage\SysButton\GetButtonList.ashx.cs">
       <DependentUpon>GetButtonList.ashx</DependentUpon>
     </Compile>
-    <Compile Include="BasePage\SysMenu\AllotButtonForm.aspx.cs">
-      <DependentUpon>AllotButtonForm.aspx</DependentUpon>
+    <Compile Include="BasePage\SysMenu\AllowButtonForm.aspx.cs">
+      <DependentUpon>AllowButtonForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="BasePage\SysMenu\AllotButtonForm.aspx.designer.cs">
-      <DependentUpon>AllotButtonForm.aspx</DependentUpon>
+    <Compile Include="BasePage\SysMenu\AllowButtonForm.aspx.designer.cs">
+      <DependentUpon>AllowButtonForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="BasePage\SysMenu\GetMenuList.ashx.cs">
       <DependentUpon>GetMenuList.ashx</DependentUpon>
@@ -3486,6 +3488,23 @@
     </Compile>
     <Compile Include="BasePage\SysMenu\MenuList.aspx.designer.cs">
       <DependentUpon>MenuList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasePage\SysRole\AllowAuthorityForm.aspx.cs">
+      <DependentUpon>AllowAuthorityForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasePage\SysRole\AllowAuthorityForm.aspx.designer.cs">
+      <DependentUpon>AllowAuthorityForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasePage\SysRole\GetRoleList.ashx.cs">
+      <DependentUpon>GetRoleList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="BasePage\SysRole\RoleList.aspx.cs">
+      <DependentUpon>RoleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasePage\SysRole\RoleList.aspx.designer.cs">
+      <DependentUpon>RoleList.aspx</DependentUpon>
     </Compile>
     <Compile Include="BasePage\SysUser\GetUserList.ashx.cs">
       <DependentUpon>GetUserList.ashx</DependentUpon>
@@ -3558,6 +3577,7 @@
     <Content Include="AJAX\VerifyCode.ashx" />
     <Content Include="AJAX\Login.ashx" />
     <Content Include="BasePage\SysUser\GetUserList.ashx" />
+    <Content Include="BasePage\SysRole\GetRoleList.ashx" />
     <None Include="Theme\JScript\jquery-easyui-1.4.5\demo\accordion\datagrid_data1.json" />
     <None Include="Theme\JScript\jquery-easyui-1.4.5\demo\combobox\combobox_data1.json" />
     <None Include="Theme\JScript\jquery-easyui-1.4.5\demo\combobox\combobox_data2.json" />

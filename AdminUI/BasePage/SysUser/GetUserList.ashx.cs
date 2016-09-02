@@ -5,13 +5,14 @@ using System.Web;
 using SysBLL;
 using SysModel;
 using Common.NetEnum;
+using System.Web.SessionState;
 
 namespace AdminUI.BasePage.SysUser
 {
     /// <summary>
     /// GetUserList 的摘要说明
     /// </summary>
-    public class GetUserList : IHttpHandler
+    public class GetUserList : IHttpHandler, IRequiresSessionState
     {
         SysUserBLL SUBLL = new SysUserBLL();
         SysUserModel model = new SysUserModel();

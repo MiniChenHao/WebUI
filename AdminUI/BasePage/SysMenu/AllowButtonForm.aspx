@@ -1,9 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AllotButtonForm.aspx.cs" Inherits="AdminUI.BasePage.SysMenu.AllotButtonForm" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AllowButtonForm.aspx.cs" Inherits="AdminUI.BasePage.SysMenu.AllowButtonForm" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head id="Head1" runat="server">
     <title></title>
     <link href="/Theme/CSS/Style.css" rel="stylesheet" type="text/css" />
     <link href="/Theme/JScript/jquery-easyui-1.4.5/themes/default/easyui.css" rel="stylesheet" type="text/css" />

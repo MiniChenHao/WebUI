@@ -5,13 +5,14 @@ using System.Web;
 using SysBLL;
 using SysModel;
 using Common.NetEnum;
+using System.Web.SessionState;
 
 namespace AdminUI.BasePage.SysButton
 {
     /// <summary>
     /// GetButtonList 的摘要说明
     /// </summary>
-    public class GetButtonList : IHttpHandler
+    public class GetButtonList : IHttpHandler, IRequiresSessionState
     {
         SysButtonBLL SBBLL = new SysButtonBLL();
         SysButtonModel model = new SysButtonModel();

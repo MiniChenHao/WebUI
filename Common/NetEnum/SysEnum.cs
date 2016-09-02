@@ -75,6 +75,56 @@ namespace Common.NetEnum
         }
 
         /// <summary>
+        /// 是否允许被删除
+        /// </summary>
+        public enum AllowDelete
+        {
+            /// <summary>
+            /// 全部
+            /// </summary>
+            [Description("全部")]
+            ALL = -1,
+
+            /// <summary>
+            /// 不允许删除
+            /// </summary>
+            [Description("否")]
+            NotBeDeleted = 0,
+
+            /// <summary>
+            /// 允许删除
+            /// </summary>
+            [Description("是")]
+            AllowDeleting = 1
+
+        }
+
+        /// <summary>
+        /// 是否允许修改
+        /// </summary>
+        public enum AllowEdit
+        {
+            /// <summary>
+            /// 全部
+            /// </summary>
+            [Description("全部")]
+            ALL = -1,
+
+            /// <summary>
+            /// 不允许编辑
+            /// </summary>
+            [Description("否")]
+            EditingNotAllowed = 0,
+
+            /// <summary>
+            /// 允许编辑
+            /// </summary>
+            [Description("是")]
+            AllowEdits = 1
+
+        }
+
+        /// <summary>
         /// 操作类型
         /// </summary>
         public enum ActionType
