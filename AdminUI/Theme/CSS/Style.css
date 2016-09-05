@@ -17,7 +17,7 @@
 }
 #GridTable .Table-Body-Tr:Hover { background-color: #FFCC00; }
 #GridTable .Table-Body-Tr td { border-top: 1px dotted #CCCCCC; }
-#GridTable .FirstTd { text-align: center; width: 35px; }
+#GridTable .FirstTd {  }
 #GridTable .OtherTd { border-left: 1px dotted #CCCCCC; }
 /*--Table--*/
 
