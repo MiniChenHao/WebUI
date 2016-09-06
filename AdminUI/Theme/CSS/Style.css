@@ -19,6 +19,25 @@
 #GridTable .Table-Body-Tr td { border-top: 1px dotted #CCCCCC; }
 #GridTable .FirstTd {  }
 #GridTable .OtherTd { border-left: 1px dotted #CCCCCC; }
+
+
+.TreeTable { border: 1px solid #95B8E7; color: #000000; }
+.TreeTable .TreeTableHead 
+{
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#F9F9F9,endColorStr=#EFEFEF); /*IE 6 7 8*/
+    background: -ms-linear-gradient(top, #F9F9F9, #EFEFEF);/* IE 10 */
+    background: -moz-linear-gradient(top, #F9F9F9, #EFEFEF);/*火狐*/
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%,from(#F9F9F9), to(#EFEFEF));/*谷歌*/
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F9F9F9), to(#EFEFEF));/* Safari 4-5, Chrome 1-9*/
+    background: -webkit-linear-gradient(top, #F9F9F9, #EFEFEF);/*Safari5.1 Chrome 10+*/
+    background: -o-linear-gradient(top, #F9F9F9, #EFEFEF);/*Opera 11.10+*/
+}
+.TreeTable .TreeTableHead td:not(:first-child) { border-left: 1px dotted #CCCCCC; }
+.TreeTable .TreeTableBody { width:100%; overflow-y:scroll; }
+.TreeTable .TreeTableBody tr { border-top: 1px dotted #CCCCCC; }
+.TreeTable .TreeTableBody tr:Hover { background-color: #FFCC00; }
+.TreeTable .TreeTableBody td:not(:first-child) { border-left: 1px dotted #CCCCCC; }
+
 /*--Table--*/
 
 

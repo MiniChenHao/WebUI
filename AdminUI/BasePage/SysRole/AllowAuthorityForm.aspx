@@ -16,7 +16,7 @@
     <script type="text/javascript">
         $(document).ready(function () {
             TableResize();
-            $("#GridTable").treeTable({
+            $("#TreeBody").treeTable({
                 initialState: "expanded" //collapsed 收缩 expanded展开的
             });
         });
@@ -27,6 +27,23 @@
             function resizeU() {
                 var windowH = $(window).height();
                 $(".MainBody").height(windowH - 100);
+                $(".TreeTableBody").height(windowH - 128);
+            }
+        }
+
+        function ckbValueObj(e) {
+            var item_id = '';
+            var arry = new Array();
+            arry = e.split('-');
+            for (var i = 0; i < arry.length - 1; i++) {
+                item_id += arry[i] + '-';
+            }
+            item_id = item_id.substr(0, item_id.length - 1);
+            if (item_id != "") {
+                if ($("#" + item_id).is(':checked') == false) {
+                    $("#" + item_id).attr("checked", true);
+                    ckbValueObj(item_id);
+                }
             }
         }
     </script>
@@ -35,22 +52,32 @@
     <form id="form1" runat="server">
     <div class="MainZone">
         <div class="MainTitle">所属角色【超级管理员】 &nbsp;&nbsp;<span style="color: Red;">注：分配权限 - 该功能谨慎使用！</span></div>
-        <div class="MainBody" style=" width:100%;">
-            <table id="GridTable" cellspacing="0" cellpadding="3">
-                <thead>
-                    <tr class="Table-Header-Tr">
-                        <td class="FirstTd">URL菜单权限</td>
-                        <td class="OtherTd">图标</td>
-                        <td class="OtherTd" style=" width: 20px;">
-                            <input type="checkbox" />
-                        </td>
-                        <td class="OtherTd">操作按钮权限</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <%=StrTreeMenu %>
-                </tbody>
-            </table>
+        <div class="MainBody" style=" width:100%; display: block; overflow: auto; ">
+            <div class="TreeTable">
+                <div class="TreeTableHead">
+                    <table cellspacing="0" cellpadding="3" style=" width:100% ">
+                        <colgroup><col style="width: 240px;" /><col /></colgroup>
+                        <thead>
+                            <tr>
+                                <td style=" width: 200px;">URL菜单权限</td>
+                                <td style=" width: 30px;">图标</td>
+                                <td style=" width: 23px;">
+                                    <input type="checkbox" />
+                                </td>
+                                <td>操作按钮权限</td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="TreeTableBody">
+                    <table id="TreeBody" cellspacing="0" cellpadding="3" style=" width:100% ">
+                        <colgroup><col style="width: 240px;" /><col /></colgroup>
+                        <tbody>
+                            <%=StrTreeMenu %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
         <div class="MainFoot" style=" text-align: center; ">
             <asp:Button ID="Save" class="button Btn-Green" runat="server" Text="保 存" onclick="Save_Click" />

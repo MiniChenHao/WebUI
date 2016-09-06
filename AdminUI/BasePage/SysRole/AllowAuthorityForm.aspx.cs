@@ -48,11 +48,11 @@ namespace AdminUI.BasePage.SysRole
                 foreach (SysMenuModel item in list)
                 {
                     string trID = ParentTRID + "-" + eRowIndex.ToString();
-                    this.StrTreeMenu.AppendFormat("<tr id='{0}' class='{1}'>", trID, (ParentID == "0" ? "Table-Body-Tr" : ("Table-Body-Tr child-of-" + ParentTRID)));
-                    this.StrTreeMenu.AppendFormat("<td class='FirstTd' style='{0}'><span class=\"folder\">{1}</span></td>", (ParentID == "0" ? "width: 200px;padding-left:20px;" : "padding-left:20px;"), item.MenuName);
-                    this.StrTreeMenu.AppendFormat("<td class='OtherTd' style=' width: 30px; text-align: center;'><img src='/Theme/Image/32/{0}' style='width:16px; height:16px;vertical-align: middle;' alt='' /></td>", item.MenuImg == "" ? "5005_flag.png" : item.MenuImg);
-                    this.StrTreeMenu.AppendFormat("<td class='OtherTd' style=' width: 23px; text-align: left;'><input id='ckb{0}' onclick=\"ckbValueObj(this.id)\" style='vertical-align: middle;margin-bottom:2px;' type=\"checkbox\" {1}  value=\"{2}\" name=\"checkbox\" /></td>", trID, "", item.MenuID);
-                    this.StrTreeMenu.AppendFormat("<td class='OtherTd'>{0}</td></tr>", GetButtonTreeTable(BList, item.MenuID.ToString(), trID));
+                    this.StrTreeMenu.AppendFormat("<tr id='{0}' class='{1}'>", trID, (ParentID == "0" ? "" : ("child-of-" + ParentTRID)));
+                    this.StrTreeMenu.AppendFormat("<td style='{0}'><span class=\"folder\">{1}</span></td>", (ParentID == "0" ? "width: 200px;padding-left:20px;" : "padding-left:20px;"), item.MenuName);
+                    this.StrTreeMenu.AppendFormat("<td style=' width: 30px; text-align: center;'><img src='/Theme/Image/32/{0}' style='width:16px; height:16px;vertical-align: middle;' alt='' /></td>", item.MenuImg == "" ? "5005_flag.png" : item.MenuImg);
+                    this.StrTreeMenu.AppendFormat("<td style=' width: 23px; text-align: left;'><input id='ckb{0}' onclick=\"ckbValueObj(this.id)\" style='vertical-align: middle;margin-bottom:2px;' type=\"checkbox\" {1}  value=\"{2}\" name=\"checkbox\" /></td>", trID, "", item.MenuID);
+                    this.StrTreeMenu.AppendFormat("<td>{0}</td></tr>", GetButtonTreeTable(BList, item.MenuID.ToString(), trID));
                     GetMenuTreeTable(MList, BList, item.MenuID.ToString(), trID);
                     eRowIndex++;
                 }
