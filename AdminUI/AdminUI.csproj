@@ -54,6 +54,7 @@
     <Content Include="App_Data\ShenWebObject.sql" />
     <Content Include="BasePage\SysButton\ButtonForm.aspx" />
     <Content Include="BasePage\SysButton\ButtonList.aspx" />
+    <Content Include="BasePage\SysLog\SystemErrorLogList.aspx" />
     <Content Include="BasePage\SysMenu\AllowButtonForm.aspx" />
     <Content Include="BasePage\SysMenu\Icons_List.aspx" />
     <Content Include="BasePage\SysMenu\MenuForm.aspx" />
@@ -66,6 +67,7 @@
     <Content Include="Default.aspx" />
     <Content Include="East.aspx" />
     <Content Include="Error\AccessDenied.html" />
+    <Content Include="Global.asax" />
     <Content Include="Index.aspx" />
     <Content Include="Login.html" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
@@ -3470,6 +3472,13 @@
     <Compile Include="BasePage\SysButton\GetButtonList.ashx.cs">
       <DependentUpon>GetButtonList.ashx</DependentUpon>
     </Compile>
+    <Compile Include="BasePage\SysLog\SystemErrorLogList.aspx.cs">
+      <DependentUpon>SystemErrorLogList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasePage\SysLog\SystemErrorLogList.aspx.designer.cs">
+      <DependentUpon>SystemErrorLogList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BasePage\SysMenu\AllowButtonForm.aspx.cs">
       <DependentUpon>AllowButtonForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3555,6 +3564,9 @@
     </Compile>
     <Compile Include="East.aspx.designer.cs">
       <DependentUpon>East.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>

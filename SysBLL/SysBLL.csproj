@@ -45,6 +45,7 @@
     <Compile Include="SysButtonBLL.cs" />
     <Compile Include="SysMenuBLL.cs" />
     <Compile Include="SysRoleBLL.cs" />
+    <Compile Include="SystemErrorLogBLL.cs" />
     <Compile Include="SysUserBLL.cs" />
   </ItemGroup>
   <ItemGroup>

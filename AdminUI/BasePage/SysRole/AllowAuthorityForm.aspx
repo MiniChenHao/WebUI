@@ -31,20 +31,57 @@
             }
         }
 
-        function ckbValueObj(e) {
-            var item_id = '';
-            var arry = new Array();
-            arry = e.split('-');
-            for (var i = 0; i < arry.length - 1; i++) {
-                item_id += arry[i] + '-';
+        function SelectItem(id) {
+            if ($("#" + id).is(":checked") == true) {
+                SelectParentItem(id);
             }
-            item_id = item_id.substr(0, item_id.length - 1);
-            if (item_id != "") {
-                if ($("#" + item_id).is(':checked') == false) {
-                    $("#" + item_id).attr("checked", true);
-                    ckbValueObj(item_id);
+            else {
+                $("#" + id).prop("checked", false);
+            }
+        }
+
+        function SelectParentItem(id) {
+            var list = new Array();
+            list = id.split("-");
+            $.each(list, function (i, n) {
+                if (i != 0 && n != "") {
+                    var PID = "";
+                    for (var j = 0; j <= i; j++) {
+                        PID += list[j] + "-";
+                    }
+                    PID = PID.substring(0, PID.length - 1);
+                    $("#" + PID).prop("checked", true);
                 }
+            })
+        }
+
+        function SelectAll() {
+            if ($("#CheckAll").is(":checked") == true) {
+                $("#TreeBody :checkbox").prop("checked", true);
             }
+            else {
+                $("#TreeBody :checkbox").prop("checked", false);
+            }
+        }
+
+        function SaveForm() {
+            showConfirmMsg("注：您确认要保存此操作吗？", function (r) {
+                if (r) {
+                    var Items = GetCheckboxValue();
+                    $("#hidItems").val(Items);
+                }
+            })
+        }
+
+        function GetCheckboxValue() {
+            var returnValue = '';
+            $("input[type='checkbox']").each(function () {
+                if ($(this).is(":checked")) {
+                    returnValue += $(this).val() + ",";
+                }
+            });
+            returnValue = returnValue.substr(0, returnValue.length - 1);
+            return returnValue;
         }
     </script>
 </head>
@@ -53,6 +90,7 @@
     <div class="MainZone">
         <div class="MainTitle">所属角色【超级管理员】 &nbsp;&nbsp;<span style="color: Red;">注：分配权限 - 该功能谨慎使用！</span></div>
         <div class="MainBody" style=" width:100%; display: block; overflow: auto; ">
+            <input type="hidden" id="hidItems" runat="server" />
             <div class="TreeTable">
                 <div class="TreeTableHead">
                     <table cellspacing="0" cellpadding="3" style=" width:100% ">
@@ -62,7 +100,7 @@
                                 <td style=" width: 200px;">URL菜单权限</td>
                                 <td style=" width: 30px;">图标</td>
                                 <td style=" width: 23px;">
-                                    <input type="checkbox" />
+                                    <input id="CheckAll" type="checkbox" onchange="SelectAll();" />
                                 </td>
                                 <td>操作按钮权限</td>
                             </tr>
@@ -80,8 +118,8 @@
             </div>
         </div>
         <div class="MainFoot" style=" text-align: center; ">
-            <asp:Button ID="Save" class="button Btn-Green" runat="server" Text="保 存" onclick="Save_Click" />
-            <button class="button Btn-Green" onclick="CloseTab();">关 闭</button>
+            <a class="button Btn-Green" onclick="SaveForm();">保 存</a>
+            <a class="button Btn-Green" onclick="CloseTab();">关 闭</a>
         </div>
     </div>
     </form>

@@ -53,6 +53,7 @@
     <Compile Include="SysButtonDAL.cs" />
     <Compile Include="SysMenuDAL.cs" />
     <Compile Include="SysRoleDAL.cs" />
+    <Compile Include="SystemErrorLogDAL.cs" />
     <Compile Include="SysUserDAL.cs" />
   </ItemGroup>
   <ItemGroup>
