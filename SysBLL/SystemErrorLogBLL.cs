@@ -15,5 +15,10 @@ namespace SysBLL
         {
             return DAL.Add(model);
         }
+
+        public List<SystemErrorLogModel> GetList(SystemErrorLogModel model)
+        {
+            return DAL.GetList(model);
+        }
     }
 }

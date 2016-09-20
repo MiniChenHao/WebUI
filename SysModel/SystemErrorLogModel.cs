@@ -8,7 +8,7 @@ namespace SysModel
     /// <summary>
     /// 系统错误日志
     /// </summary>
-    public class SystemErrorLogModel
+    public class SystemErrorLogModel : BaseModel<SystemErrorLogModel>
     {
         /// <summary>
         /// ID

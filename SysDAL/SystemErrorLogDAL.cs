@@ -25,5 +25,26 @@ namespace SysDAL
             int i = db.ExecuteNonQuery(cmd);
             return i;
         }
+
+        public List<SystemErrorLogModel> GetList(SystemErrorLogModel model)
+        {
+            List<SystemErrorLogModel> List = new List<SystemErrorLogModel>();
+            string[] strPara = new string[] { "@PageIndex", "@PageSize", "@OUTTotalCount" };
+            ParameterMapper mapper = new ParameterMapper(strPara);
+            var ObjectModel = db.CreateSprocAccessor<SystemErrorLogModel>("PROC_T_SYS_GetSystemErrorLogList", mapper, MapBuilder<SystemErrorLogModel>.MapNoProperties()
+                .Map(p => p.ID).ToColumn("ID")
+                .Map(p => p.ErrorType).ToColumn("ErrorType")
+                .Map(p => p.ErrorMessage).ToColumn("ErrorMessage")
+                .Map(p => p.PathAndQuery).ToColumn("PathAndQuery")
+                .Map(p => p.ClientIP).ToColumn("ClientIP")
+                .Map(p => p.ErrorTime).ToColumn("ErrorTime")
+                .Map(p => p.StackTrace).ToColumn("StackTrace")
+                .Build()
+                );
+            object[] param = { model.PageIndex, model.PageSize, model.OUTTotalCount };
+            List = ObjectModel.Execute(param).ToList<SystemErrorLogModel>();
+            model.OUTTotalCount = int.Parse(mapper.GetParameterValue("@OUTTotalCount").ToString());
+            return List;
+        }
     }
 }

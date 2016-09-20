@@ -11,42 +11,46 @@
     <script src="/Theme/JScript/jquery-1.12.3.min.js" type="text/javascript"></script>
     <script src="/Theme/JScript/jquery-easyui-1.4.5/jquery.easyui.min.js" type="text/javascript"></script>
     <script src="/Theme/JScript/jquery-easyui-1.4.5/locale/easyui-lang-zh_CN.js" type="text/javascript"></script>
+    <script src="/Theme/JScript/datagrid-detailview.js" type="text/javascript"></script>
     <script src="/Theme/JScript/FunctionJS.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             MainResize(47);
             $("#GridTable").datagrid({
-                url: '/BasePage/SysRole/GetRoleList.ashx',
+                url: '/BasePage/SysLog/GetLogList.ashx?Type=SEL',
+                pagination: true,
+                border: true,
                 rownumbers: true,
                 singleSelect: true,
-                detailFormatter: detailformatter,
-                frozenColumns: [[
-                    { field: 'ck', checkbox: true },
-                    { field: 'RoleName', title: '角色名称', align: 'center' }
-                ]],
+                fitColumns: true,
+                view: detailview,
                 columns: [[
-                    { field: 'RoleRemark', title: '角色描述', align: 'center' },
-                    { field: 'AllowEdit', title: '是否能编辑', align: 'center' },
-                    { field: 'AllowDelete', title: '是否能删除', align: 'center' },
-                    { field: 'SortCode', title: '排序', align: 'center' },
-                    { field: 'CreateDate', title: '创建时间', align: 'center' },
-                    { field: 'ModifyDate', title: '最后编辑时间', align: 'center' }
-                ]]
+                    { field: 'ErrorType', title: '错误类型', align: 'center', width: 120 },
+                    { field: 'ErrorMessage', title: '错误描述', align: 'center', width: 300 },
+                    { field: 'ClientIP', title: '客户IP', align: 'center', width: 100 },
+                    { field: 'PathAndQuery', title: '访问地址', align: 'center', width: 200 },
+                    { field: 'ErrorTime', title: '时间', align: 'center', width: 150 }
+                ]],
+                detailFormatter: function (index, row) {
+                    return '<div style=\" background-color: #ffff00; \">'
+                    + '错误类型：' + row.ErrorType
+                    + '<br/><br/>错误描述：' + row.ErrorMessage
+                    + '<br/><br/>调用堆栈：<br/><br/>' + row.StackTrace + '</div>';
+                }
             })
         })
-
-        function detailformatter(index, row) {
-            return '<div class="system_error_log_details">'
-            + '错误类型：' + row.ErrorType
-            + '<br/><br/>错误描述：' + row.ErrorMessage
-            + '<br/><br/>调用堆栈：<br/><br/>' + row.StackTrace + '</div>';
-        }
     </script>
 </head>
 <body>
     <form id="form1" runat="server">
     <div class="MainZone">
-        <div class="MainTitle">角色列表</div>
+        <div class="MainTitle">系统错误列表
+            <div style=" float:right; padding-right:2px; ">
+                <a title="新增" onclick="ADD()" class="button Btn-Green">
+                    <span class="btn-icon" style=" background: url('/Theme/Image/16/add.png') no-repeat center center; "></span>新增
+                </a>
+            </div>
+        </div>
         <div class="MainBody" style=" width:100%;">
             <table id="GridTable" class="easyui-datagrid" fit="true"></table>
         </div>

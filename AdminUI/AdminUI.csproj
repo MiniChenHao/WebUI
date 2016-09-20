@@ -2670,6 +2670,7 @@
     <Content Include="Theme\JScript\artDialog\skins\icons\question.png" />
     <Content Include="Theme\JScript\artDialog\skins\icons\succeed.png" />
     <Content Include="Theme\JScript\artDialog\skins\icons\warning.png" />
+    <Content Include="Theme\JScript\datagrid-detailview.js" />
     <Content Include="Theme\JScript\FunctionJS.js" />
     <Content Include="Theme\JScript\jQuery-Validation-Engine\css\validationEngine.jquery.css" />
     <Content Include="Theme\JScript\jQuery-Validation-Engine\js\jquery.validationEngine-zh_CN.js" />
@@ -3472,6 +3473,9 @@
     <Compile Include="BasePage\SysButton\GetButtonList.ashx.cs">
       <DependentUpon>GetButtonList.ashx</DependentUpon>
     </Compile>
+    <Compile Include="BasePage\SysLog\GetLogList.ashx.cs">
+      <DependentUpon>GetLogList.ashx</DependentUpon>
+    </Compile>
     <Compile Include="BasePage\SysLog\SystemErrorLogList.aspx.cs">
       <DependentUpon>SystemErrorLogList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3602,6 +3606,7 @@
     <Content Include="AJAX\Login.ashx" />
     <Content Include="BasePage\SysUser\GetUserList.ashx" />
     <Content Include="BasePage\SysRole\GetRoleList.ashx" />
+    <Content Include="BasePage\SysLog\GetLogList.ashx" />
     <None Include="Theme\JScript\jquery-easyui-1.4.5\demo\accordion\datagrid_data1.json" />
     <None Include="Theme\JScript\jquery-easyui-1.4.5\demo\combobox\combobox_data1.json" />
     <None Include="Theme\JScript\jquery-easyui-1.4.5\demo\combobox\combobox_data2.json" />
