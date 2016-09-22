@@ -25,17 +25,19 @@
                 fitColumns: true,
                 view: detailview,
                 columns: [[
-                    { field: 'ErrorType', title: '错误类型', align: 'center', width: 120 },
-                    { field: 'ErrorMessage', title: '错误描述', align: 'center', width: 300 },
-                    { field: 'ClientIP', title: '客户IP', align: 'center', width: 100 },
-                    { field: 'PathAndQuery', title: '访问地址', align: 'center', width: 200 },
-                    { field: 'ErrorTime', title: '时间', align: 'center', width: 150 }
+                    { field: 'ErrorType', title: '错误类型', align: 'center' },
+                    { field: 'ErrorMessage', title: '错误描述', align: 'left' },
+                    { field: 'ClientIP', title: '客户IP', align: 'center' },
+                    { field: 'PathAndQuery', title: '访问地址', align: 'left' },
+                    { field: 'ErrorTime', title: '时间', align: 'center' }
                 ]],
                 detailFormatter: function (index, row) {
                     return '<div style=\" background-color: #ffff00; \">'
                     + '错误类型：' + row.ErrorType
                     + '<br/><br/>错误描述：' + row.ErrorMessage
                     + '<br/><br/>调用堆栈：<br/><br/>' + row.StackTrace + '</div>';
+                },
+                onExpandRow: function (index, row) {
                 }
             })
         })
