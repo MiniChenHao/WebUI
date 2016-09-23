@@ -54,6 +54,7 @@
     <Content Include="App_Data\ShenWebObject.sql" />
     <Content Include="BasePage\SysButton\ButtonForm.aspx" />
     <Content Include="BasePage\SysButton\ButtonList.aspx" />
+    <Content Include="BasePage\SysData\DataResourcesIndex.aspx" />
     <Content Include="BasePage\SysLog\SystemErrorLogList.aspx" />
     <Content Include="BasePage\SysMenu\AllowButtonForm.aspx" />
     <Content Include="BasePage\SysMenu\Icons_List.aspx" />
@@ -73,6 +74,7 @@
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Theme\CSS\EasyUIStyle.css" />
     <Content Include="Theme\CSS\Index.css" />
     <Content Include="Theme\CSS\login.css" />
     <Content Include="Theme\CSS\MainFrame.css" />
@@ -3472,6 +3474,13 @@
     </Compile>
     <Compile Include="BasePage\SysButton\GetButtonList.ashx.cs">
       <DependentUpon>GetButtonList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="BasePage\SysData\DataResourcesIndex.aspx.cs">
+      <DependentUpon>DataResourcesIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasePage\SysData\DataResourcesIndex.aspx.designer.cs">
+      <DependentUpon>DataResourcesIndex.aspx</DependentUpon>
     </Compile>
     <Compile Include="BasePage\SysLog\GetLogList.ashx.cs">
       <DependentUpon>GetLogList.ashx</DependentUpon>
