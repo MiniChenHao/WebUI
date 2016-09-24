@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="BaseModel.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="ColumnModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SysButtonModel.cs" />
     <Compile Include="SysMenuModel.cs" />

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DataResourcesIndex.aspx.cs" Inherits="AdminUI.BasePage.SysData.DataResourcesIndex" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DataResourcesWest.aspx.cs" Inherits="AdminUI.BasePage.SysData.DataResourcesWest" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -15,20 +15,23 @@
     <script src="/Theme/JScript/FunctionJS.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            MainResize(47);
-            $("#DataLayout").layout({
-                fit: true,
-                collapsible: false
+            $('#DataList').tree({
+                url: '/BasePage/SysData/GetDataResources.ashx?Type=TableNameList',
+                animate: true,
+                lines: true,
+                onlyLeafCheck: true,
+                onClick: function (node) {
+                    alert(node.id);
+                }
             });
         })
     </script>
 </head>
-<body id="DataLayout" class="easyui-layout">
-	<div data-options="region:'west', split:true, collapsible:false, minWidth:200" title="数据资源管理器" style=" width:20%; ">
-	    <iframe id="DataWest" src="DataResourcesWest.aspx" scrolling="auto" frameborder="0" width="100%" height="100%"></iframe>
-	</div>
-	<div data-options="region:'center',iconCls:'icon-ok'" title="表">
-	    <iframe id="DataCenter" src="" scrolling="auto" frameborder="0" width="100%" height="100%"></iframe>
-	</div>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <ul id="DataList" class="easyui-tree"></ul>
+    </div>
+    </form>
 </body>
 </html>

@@ -51,6 +51,7 @@
     <Compile Include="ParameterMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SysButtonDAL.cs" />
+    <Compile Include="SysDataDAL.cs" />
     <Compile Include="SysMenuDAL.cs" />
     <Compile Include="SysRoleDAL.cs" />
     <Compile Include="SystemErrorLogDAL.cs" />

@@ -55,6 +55,7 @@
     <Content Include="BasePage\SysButton\ButtonForm.aspx" />
     <Content Include="BasePage\SysButton\ButtonList.aspx" />
     <Content Include="BasePage\SysData\DataResourcesIndex.aspx" />
+    <Content Include="BasePage\SysData\DataResourcesWest.aspx" />
     <Content Include="BasePage\SysLog\SystemErrorLogList.aspx" />
     <Content Include="BasePage\SysMenu\AllowButtonForm.aspx" />
     <Content Include="BasePage\SysMenu\Icons_List.aspx" />
@@ -3482,6 +3483,16 @@
     <Compile Include="BasePage\SysData\DataResourcesIndex.aspx.designer.cs">
       <DependentUpon>DataResourcesIndex.aspx</DependentUpon>
     </Compile>
+    <Compile Include="BasePage\SysData\DataResourcesWest.aspx.cs">
+      <DependentUpon>DataResourcesWest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasePage\SysData\DataResourcesWest.aspx.designer.cs">
+      <DependentUpon>DataResourcesWest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasePage\SysData\GetDataResources.ashx.cs">
+      <DependentUpon>GetDataResources.ashx</DependentUpon>
+    </Compile>
     <Compile Include="BasePage\SysLog\GetLogList.ashx.cs">
       <DependentUpon>GetLogList.ashx</DependentUpon>
     </Compile>
@@ -3616,6 +3627,7 @@
     <Content Include="BasePage\SysUser\GetUserList.ashx" />
     <Content Include="BasePage\SysRole\GetRoleList.ashx" />
     <Content Include="BasePage\SysLog\GetLogList.ashx" />
+    <Content Include="BasePage\SysData\GetDataResources.ashx" />
     <None Include="Theme\JScript\jquery-easyui-1.4.5\demo\accordion\datagrid_data1.json" />
     <None Include="Theme\JScript\jquery-easyui-1.4.5\demo\combobox\combobox_data1.json" />
     <None Include="Theme\JScript\jquery-easyui-1.4.5\demo\combobox\combobox_data2.json" />
