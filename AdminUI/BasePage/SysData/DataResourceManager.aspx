@@ -1,9 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DataResourcesWest.aspx.cs" Inherits="AdminUI.BasePage.SysData.DataResourcesWest" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DataResourceManager.aspx.cs" Inherits="AdminUI.BasePage.SysData.DataResourceManager" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head id="Head1" runat="server">
     <title></title>
     <link href="/Theme/CSS/Style.css" rel="stylesheet" type="text/css" />
     <link href="/Theme/JScript/jquery-easyui-1.4.5/themes/icon.css" rel="stylesheet" type="text/css" />
@@ -21,7 +21,9 @@
                 lines: true,
                 onlyLeafCheck: true,
                 onClick: function (node) {
-                    alert(node.id);
+                    if (node.id != -1) {
+                        window.parent.frames["DataCenter"].location = "/BasePage/SysData/TableStructure.aspx?tableName=" + node.text;
+                    }
                 }
             });
         })

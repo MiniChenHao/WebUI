@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using SysDAL;
 using System.Data;
+using SysModel;
 
 namespace SysBLL
 {
@@ -16,7 +17,7 @@ namespace SysBLL
             return DAL.GetTableNameList();
         }
 
-        public DataSet GetTableColumnList(string Tablename)
+        public List<ColumnModel> GetTableColumnList(string Tablename)
         {
             return DAL.GetTableColumnList(Tablename);
         }

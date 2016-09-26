@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace AdminUI.BasePage.SysData
 {
-    public partial class DataResourcesIndex : PageBase
+    public partial class TableStructure : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

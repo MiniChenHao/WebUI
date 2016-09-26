@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace AdminUI.BasePage.SysLog
 {
-    public partial class SystemErrorLogList : System.Web.UI.Page
+    public partial class SystemErrorLogList : PageBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

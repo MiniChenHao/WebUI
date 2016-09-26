@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using SysBLL;
 using System.Data;
+using SysModel;
 
 namespace AdminUI.BasePage.SysData
 {
@@ -25,7 +26,7 @@ namespace AdminUI.BasePage.SysData
                     JsonString = GetTableNameJson();
                     break;
                 case "TableColumnList":
-                    JsonString = GetTableColumnJson();
+                    JsonString = GetTableColumnJson(context);
                     break;
             }
             context.Response.Write(JsonString);
@@ -45,12 +46,21 @@ namespace AdminUI.BasePage.SysData
             return Result;
         }
 
-        public string GetTableColumnJson()
+        public string GetTableColumnJson(HttpContext context)
         {
+            string TableName = context.Request["tableName"] == null ? "" : context.Request["tableName"].ToString();
             string Result = "";
-            string TableName = "";
-            DataSet ds = SDBLL.GetTableColumnList(TableName);
-            DataRowCollection RowList = ds.Tables[0].Rows;
+            if (TableName != "")
+            {
+                List<ColumnModel> list = SDBLL.GetTableColumnList(TableName);
+                Result = "{\"total\":" + list.Count + ",\"rows\":[";
+                foreach (ColumnModel item in list)
+                {
+                    Result += "{\"RowNo\":\"" + item.RowNo + "\",\"ColumnName\":\"" + item.ColumnName + "\",\"DataType\":\"" + item.DataType + "\",\"Length\":\"" + item.Length + "\",\"IsNull\":\"" + (item.IsNull ? "是" : "否") + "\",\"IsMark\":\"" + (item.IsMark ? "是" : "否") + "\",\"IsKey\":\"" + (item.IsKey ? "是" : "否") + "\",\"Defaults\":\"" + item.Defaults + "\",\"Explanation\":\"" + item.Explanation + "\"},";
+                }
+                Result = Result.TrimEnd(',');
+                Result += "]}";
+            }
             return Result;
         }
 

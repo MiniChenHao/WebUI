@@ -25,10 +25,10 @@
 </head>
 <body id="DataLayout" class="easyui-layout">
 	<div data-options="region:'west', split:true, collapsible:false, minWidth:200" title="数据资源管理器" style=" width:20%; ">
-	    <iframe id="DataWest" src="DataResourcesWest.aspx" scrolling="auto" frameborder="0" width="100%" height="100%"></iframe>
+	    <iframe id="DataWest" name="DataWest" src="DataResourceManager.aspx" scrolling="auto" frameborder="0" width="100%" height="100%"></iframe>
 	</div>
 	<div data-options="region:'center',iconCls:'icon-ok'" title="表">
-	    <iframe id="DataCenter" src="" scrolling="auto" frameborder="0" width="100%" height="100%"></iframe>
+	    <iframe id="DataCenter" name="DataCenter" src="TableStructure.aspx" scrolling="auto" frameborder="0" width="100%" height="100%"></iframe>
 	</div>
 </body>
 </html>

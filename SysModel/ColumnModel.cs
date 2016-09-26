@@ -28,17 +28,17 @@ namespace SysModel
         public int Length { get; set; }
 
         /// <summary>
-        /// 是否为空
+        /// 是否能为空
         /// </summary>
         public bool IsNull { get; set; }
 
         /// <summary>
-        /// 标识
+        /// 是否标识
         /// </summary>
         public bool IsMark { get; set; }
 
         /// <summary>
-        /// 主键
+        /// 是否主键
         /// </summary>
         public bool IsKey { get; set; }
 
