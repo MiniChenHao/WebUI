@@ -10,7 +10,12 @@ namespace SysBLL
 {
     public class SysDataBLL
     {
-        SysDataDAL DAL = new SysDataDAL();
+        SysDataDAL DAL;
+
+        public SysDataBLL(string DataBaseName)
+        {
+            DAL = new SysDataDAL(DataBaseName);
+        }
 
         public DataSet GetTableNameList()
         {

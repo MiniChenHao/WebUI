@@ -11,7 +11,12 @@ namespace SysDAL
 {
     public class SysDataDAL
     {
-        Database db = DatabaseFactory.CreateDatabase("ShenWebObject");
+        Database db;
+
+        public SysDataDAL(string DataBaseName)
+        {
+            db = DatabaseFactory.CreateDatabase(DataBaseName);
+        }
 
         public DataSet GetTableNameList()
         {

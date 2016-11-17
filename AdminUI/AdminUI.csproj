@@ -69,7 +69,9 @@
     <Content Include="Dashboard.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="East.aspx" />
-    <Content Include="Error\AccessDenied.html" />
+    <Content Include="Error\FileNotFound.html" />
+    <Content Include="Error\GenericErrorPage.html" />
+    <Content Include="Error\NoAccess.html" />
     <Content Include="Global.asax" />
     <Content Include="Index.aspx" />
     <Content Include="Login.html" />
@@ -2646,6 +2648,7 @@
     <Content Include="Theme\Image\next.gif" />
     <Content Include="Theme\Image\prev.gif" />
     <Content Include="Theme\Image\refresh.png" />
+    <Content Include="Theme\Image\robot.png" />
     <Content Include="Theme\Image\sun_2.png" />
     <Content Include="Theme\JScript\artDialog\artDialog.js" />
     <Content Include="Theme\JScript\artDialog\artDialog.source.js" />
@@ -3444,7 +3447,9 @@
     <Content Include="Theme\JScript\TreeTable\css\jquery.treeTable.css" />
     <Content Include="Theme\JScript\TreeTable\jquery.treeTable.js" />
     <Content Include="UserControl\PageControl.ascx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

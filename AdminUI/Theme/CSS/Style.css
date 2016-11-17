@@ -69,6 +69,7 @@
 /*--Panel--*/
 .ShortcutIcons { float: left; border: solid 1px #ccc; width: 47px; height: 35px; margin: 5px; padding: 3px; cursor: pointer; vertical-align: middle; 
                  text-align: center; word-break: keep-all; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; border-radius:3px; }
+.ShortcutIcons img { margin-bottom: 4px; }              
 .ShortcutIcons:hover { color: #FFF; border: solid 1px #3399dd; background: #2288cc; 
                        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33bbee', endColorstr='#2288cc'); 
                        background: linear-gradient(top, #33bbee, #2288cc); 

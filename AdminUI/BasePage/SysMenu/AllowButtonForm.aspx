@@ -29,7 +29,7 @@
                     }
                 })
                 if (ExistsValidation == true) {
-                    alert("asdf");
+                    $("#SelectButtonList").append("<div onclick='SelectedButton(this)' ondblclick='RemoveButton(" + $(this).attr('id') + ")' title='" + $(this).attr('title') + "' class='ShortcutIcons'>" + $(this).html() + "</div>");
                 }
                 else {
                     showWarningMsg("【" + SelectButtonName + "】按钮已经存在！");
@@ -41,6 +41,10 @@
             $('.ShortcutIcons').removeClass("selected");
             $(e).addClass("selected"); //添加选中样式
         }
+
+        function RemoveButton(e) {
+            alert(e);
+        }
     </script>
 </head>
 <body>
@@ -50,7 +54,7 @@
         <div class="MainBody" style=" width:100%;">
             <div id="SelectButton" class="easyui-layout">
                 <div id="AllButtonList" data-options="region:'west', split:true, collapsible:false, minWidth:200" title="所有按钮" style=" width:50%; ">
-	                <asp:Repeater ID="AllButtonList" runat="server" >
+	                <asp:Repeater ID="RpAllButtonList" runat="server" >
                         <ItemTemplate>
                             <div id='<%# Eval("ButtonID") %>'  onclick='SelectedButton(this)' title='<%# Eval("ButtonName") %>' class="ShortcutIcons">
                                 <img src='<%# "/Theme/Image/16/" + Eval("ButtonImg").ToString() %>'' alt='' /><br /><%# Eval("ButtonName") %>
@@ -59,7 +63,7 @@
                     </asp:Repeater>
 	            </div>
 	            <div id="SelectButtonList" data-options="region:'center'" title="已选按钮">
-	                <asp:Repeater ID="SelectButtonList" runat="server" >
+	                <asp:Repeater ID="RpSelectButtonList" runat="server" >
                         <ItemTemplate>
                             <div onclick='SelectedButton(this)' ondblclick="RemoveButton('<%# Eval("MenuID") %>')" title='<%# Eval("MenuName") %>' class="ShortcutIcons">
                                 <img src='<%# "/Theme/Image/16/" + Eval("MenuImg").ToString() %>' alt="" /><br /><%# Eval("MenuName") %>

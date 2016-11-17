@@ -34,16 +34,16 @@ namespace AdminUI.BasePage.SysMenu
             MModel.DeleteFlag = Convert.ToInt32(SysEnum.DeleteFlag.NotRemoved);
             MModel.MenuType = Convert.ToInt32(SysEnum.MenuType.Button);
             List<SysMenuModel> MList = SMBll.GetMenuList(MModel);
-            SelectButtonList.DataSource = MList;
-            SelectButtonList.DataBind();
+            RpSelectButtonList.DataSource = MList;
+            RpSelectButtonList.DataBind();
 
             SysButtonModel BModel = new SysButtonModel();
             BModel.DeleteFlag = Convert.ToInt32(SysEnum.DeleteFlag.NotRemoved);
             BModel.PageIndex = 1;
             BModel.PageSize = 10000;
             List<SysButtonModel> BList = SBBLL.GetButtonList(BModel);
-            AllButtonList.DataSource = BList;
-            AllButtonList.DataBind();
+            RpAllButtonList.DataSource = BList;
+            RpAllButtonList.DataBind();
         }
 
         protected void Save_Click(object sender, EventArgs e)

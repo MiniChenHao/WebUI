@@ -13,7 +13,7 @@ namespace AdminUI.BasePage.SysData
     /// </summary>
     public class GetDataResources : IHttpHandler
     {
-        SysDataBLL SDBLL = new SysDataBLL();
+        SysDataBLL SDBLL = new SysDataBLL("ShenWebObject");
 
         public void ProcessRequest(HttpContext context)
         {

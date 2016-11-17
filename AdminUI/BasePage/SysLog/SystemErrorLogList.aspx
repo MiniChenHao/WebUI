@@ -22,14 +22,13 @@
                 border: true,
                 rownumbers: true,
                 singleSelect: true,
-                fitColumns: true,
                 view: detailview,
                 columns: [[
-                    { field: 'ErrorType', title: '错误类型', align: 'center', width:100 },
+                    { field: 'ErrorType', title: '错误类型', align: 'center', width: 200 },
                     { field: 'ErrorMessage', title: '错误描述', align: 'left', width: 300 },
                     { field: 'ClientIP', title: '客户IP', align: 'center', width: 100 },
                     { field: 'PathAndQuery', title: '访问地址', align: 'left', width: 300 },
-                    { field: 'ErrorTime', title: '时间', align: 'center', width: 100 }
+                    { field: 'ErrorTime', title: '时间', align: 'center', width: 150 }
                 ]],
                 detailFormatter: function (index, row) {
                     return '<div style=\" background-color: #ffff00; \">'
@@ -41,6 +40,9 @@
                 }
             })
         })
+
+        function ADD() {
+        }
     </script>
 </head>
 <body>

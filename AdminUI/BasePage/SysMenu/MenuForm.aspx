@@ -84,7 +84,7 @@
                     <tr>
                         <th align="right">链接地址:</th>
                         <td align="left">
-                            <textarea runat="server" id="NavigateUrl" rows="3" cols="25"></textarea>
+                            <textarea runat="server" id="NavigateUrl" rows="6" cols="45"></textarea>
                         </td>
                     </tr>
                 </tbody>
